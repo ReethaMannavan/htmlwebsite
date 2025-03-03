@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        
+        .container1{
+            display: grid;
+            border:1px solid blue; 
+            grid-template-columns: 100px 100px 50px;
+        }
+        .col1,.col2,.col3{
+            border:1px solid red;
+        }
+        .container2{
+            display: grid;
+            border:1px solid rgb(3, 80, 32); 
+            grid-template-columns: repeat(3,1fr);
+        }
+        .col4,.col5,.col6{
+            border:1px solid rgb(102, 12, 35);
+        }
+        .container3{
+            display: grid;
+            border:1px solid blue; 
+            grid-template-rows: 100px 200px auto;
+        }
+        .col7,.col8,.col9{
+            border:1px solid rgb(31, 29, 30);
+        }
+        .container4{
+            display: grid;
+            border:1px solid blue; 
+            grid-template-rows: 100px 100px 100px;
+            gap:10px;
+          
+        }
+      
+        .col10{
+            border:1px solid rgb(31, 29, 30);
+            background-color: rgb(209, 209, 57);
+        }
+        .col11{
+            border:1px solid rgb(31, 29, 30);
+            background-color: rgb(116, 93, 216);
+        }
+        .col12{
+            border:1px solid rgb(31, 29, 30);
+            background-color: rgb(214, 125, 7);
+        }
+        .container5{
+            height:100px;
+            display: grid;
+            border:1px solid rgb(22, 22, 24); 
+            grid-template-columns:2fr 1fr 1fr;
+            gap:10px;
+          
+        }
+        .col13{
+            border:1px solid rgb(31, 29, 30);
+            background-color: rgb(7, 101, 138);
+        }
+        .col14{
+            border:1px solid rgb(31, 29, 30);
+            background-color: rgba(226, 27, 103, 0.74);
+        }
+        .col15{
+            border:1px solid rgb(31, 29, 30);
+            background-color: rgb(121, 79, 24);
+        }
+        .container6{
+            padding: 5px;
+            height:200px;
+            display: grid;
+            border:1px solid rgb(22, 22, 24); 
+            grid-template-columns:repeat(6,1fr);
+            gap:10px;
+         
+          
+        }
+        .col16,.col17,.col18,.col19,.col20,.col21{
+            border:1px solid rgb(31, 29, 30); 
+            width:120px;
+         
+        }
+       .container6 img{
+            height:100px;
+            width:90px;
+        }
+        .container6 h3,p{
+       font-size: 11px;
+        }
+        .container6 div{
+        justify-items: center;
+        }
+
+        .container7{
+            padding: 5px;
+            height:400px;
+            display: grid;
+            border:1px solid rgb(22, 22, 24); 
+            grid-template-columns:100px 100px;
+            grid-template-rows: auto;
+            gap: 20px;
+        
+            
+        
+        }
+        .col22,.col23,.col24,.col25,.col26,.col27{
+            border:1px solid rgb(31, 29, 30); 
+        }
+        .container7 img{
+            height:100px;
+            width:90px;
+        }
+        .container8 { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); /* Three columns */ 
+            height:100px;
+            gap: 20px; 
+            border:1px solid rgb(31, 29, 30); 
+        }
+        .col28,.col29,.col30{
+            border:1px solid rgb(31, 29, 30); 
+        }
+        .container9{ 
+          padding:20px;
+            display: grid; 
+          grid-template-rows: 50px 150px 80px;
+            height:350px;
+            gap: 20px; 
+            border:3px solid rgb(31, 29, 30); 
+            align-items: stretch;
+           
+        }
+        .height,.row,.footer{
+            border:2px solid red;
+         
+        }
+        .container10{
+            padding: 5px;
+            height:400px;
+            display: grid;
+            border:1px solid rgb(22, 22, 24); 
+            grid-template-columns:100px 100px;
+            grid-template-rows: auto;
+            gap: 20px;
+        
+        }
+        .container10 img{
+            height:100px;
+            width:90px;
+        }
+        .container10 img:hover { 
+      transform: scale(1.5); 
+    } 
+    .container11{
+            padding: 5px;
+            height:200px;
+            display: grid;
+            border:3px solid rgb(2, 182, 17); 
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        
+        }
+        .col37,.col38,.col39{
+            border:3px solid rgb(223, 11, 117); 
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <!-- CSS 105: Create a grid-container with display: grid.  -->
+        <div class="container1">
+            <div class="col1">col1</div>
+            <div class="col2">col2</div>
+            <div class="col3">col3</div>
+        </div>
+        <br>
+
+        <!-- CSS 106: Define three equal-width columns using grid-template
+columns: repeat(3, 1fr). -->
+<div class="container2">
+    <div class="col4">col4</div>
+    <div class="col5">col5</div>
+    <div class="col6">col6</div>
+</div>
+<br>
+
+<!-- CSS 107: Create a grid with fixed row heights using grid-template-rows: 
+100px 200px auto.  -->
+
+<div class="container3">
+    <div class="col7">col7</div>
+    <div class="col8">col8</div>
+    <div class="col9">col9</div>
+</div>
+<br>
+
+<!-- CSS 108: Add spacing between grid items using gap: 10px.  -->
+
+<div class="container4">
+    <div class="col10">col10</div>
+    <div class="col11">col11</div>
+    <div class="col12">col12</div>
+</div>
+<br>
+
+<!-- CSS 109: Use grid-template-columns to create a layout with one wide 
+column and two narrow columns (2fr 1fr 1fr).  -->
+<div class="container5">
+    <div class="col13">col13</div>
+    <div class="col14">col14</div>
+    <div class="col15">col15</div>
+</div>
+<br>
+
+<!-- CSS 110: Add a responsive layout using media queries to adjust the 
+number of columns.  -->
+
+<!-- CSS 111: Build a grid of six cards with a uniform layout -->
+
+<div class="container6">
+    <div class="col16"><img src="/CSS9/assets/images/briyani.jpg">
+        <h3>Briyani</h3>
+        <p>$10</p>
+    </div>
+    <div class="col17"><img src="/CSS9/assets/images/cake.jpg">
+        <h3>Cake</h3>
+        <p>$8</p>
+    </div>
+    <div class="col18"><img src="/CSS9/assets/images/chinese cuisine.jpg">
+        <h3>Chinese cuisine</h3>
+        <p>$11</p>
+    </div>
+    <div class="col19"><img src="/CSS9/assets/images/food.jpeg">
+        <h3>food</h3>
+        <p>$12</p>
+    </div>
+    <div class="col20"><img src="/CSS9/assets/images/inidan cuisine2.jpg">
+        <h3>indian cuisine</h3>
+        <p>$10</p>
+    </div>
+    <div class="col21"><img src="/CSS9/assets/images/food.jpeg">
+        <h3>food</h3>
+        <p>$9</p>
+    </div>
+</div>
+<br>
+
+<!-- CSS 112: Create a photo gallery using grid-template-rows and grid
+template-columns.  -->
+
+<div class="container7">
+    <div class="col22"><img src="/CSS9/assets/images/sneakers.jpg"></div>
+    <div class="col23"><img src="/CSS9/assets/images/iphone16.jpg"></div>
+    <div class="col24"><img src="/CSS9/assets/images/food.jpeg"></div>
+    <div class="col25"><img src="/CSS9/assets/images/cake.jpg"></div>
+    <div class="col26"><img src="/CSS9/assets/images/inidan cuisine2.jpg"></div>
+    <div class="col27"><img src="/CSS9/assets/images/chinese cuisine.jpg"></div>
+</div>
+<br>
+
+<!-- CSS 113: Adjust grid column sizes dynamically using fr units. -->
+
+<div class="container8">
+    <div class="col28">col28</div>
+    <div class="col29">col29</div>
+    <div class="col30">col30</div>
+</div>
+<br>
+
+<!-- CSS 114: Apply different row heights for header, content, and footer 
+using grid-template-rows.  -->
+<div class="container9">
+<header class="height">
+    <h1>different row heights</h1>
+</header>
+<section class="row">
+    <div class="row1">1</div>
+    <div class="row2">2</div>
+    <div class="row3">3</div>
+</section>
+<footer class="footer">
+    <p>© 2025 My Portfolio | All rights reserved</p>
+</footer>
+</div>
+<br>
+
+<!-- CSS 115: Add a hover effect to grid items in a gallery. -->
+<div class="container10">
+    <div class="col31"><img src="/CSS9/assets/images/sneakers.jpg"></div>
+    <div class="col32"><img src="/CSS9/assets/images/iphone16.jpg"></div>
+    <div class="col33"><img src="/CSS9/assets/images/food.jpeg"></div>
+    <div class="col34"><img src="/CSS9/assets/images/cake.jpg"></div>
+    <div class="col35"><img src="/CSS9/assets/images/inidan cuisine2.jpg"></div>
+    <div class="col36"><img src="/CSS9/assets/images/chinese cuisine.jpg"></div>
+</div>
+<br>
+<!-- CSS 116: Use media queries to adjust a grid layout for mobile, tablet, and 
+desktop views.  -->
+
+<!-- CSS 117: Combine gap and border for visually separated grid items.  -->
+<div class="container11">
+    <div class="col37">col37</div>
+    <div class="col38">col38</div>
+    <div class="col39">col39</div>
+</div>
+<br>
+    </main>
+</body>
+</html>
