@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            border: 1px solid black;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+            height: 500px;
+           
+        }
+
+        .container div {
+            border: 1px solid rgb(173, 13, 13);
+            background-color: rgb(255, 167, 108);
+            text-align: center;
+            align-content: center;
+        }
+
+        .col1 {
+            grid-area: 1/1/3/4;
+            text-align: center;
+            font-size: 30px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS 121: Use grid-area to position a header across the top of a grid 
+layout.   -->
+    <header>
+        <div class="container">
+            <div class="col1">Header</div>
+            <div class="col2">Item 2</div>
+            <div class="col3">Item 3</div>
+            <div class="col4">Item 4</div>
+            <div class="col5">Item 5</div>
+            <div class="col6">Item 6</div>
+            <div class="col6">Item 7</div>
+            <div class="col6">Item 8</div>
+            <div class="col6">Item 9</div>
+        </div>
+    </header>
+
+
+</body>
+
+</html>

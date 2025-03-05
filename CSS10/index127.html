@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            height: 80vh;
+            grid-template-columns: 1fr 1fr;
+          
+            grid-template-rows: 0.2fr 0.5fr 1fr;
+            grid-template-areas: "nav nav nav nav"
+                "sidebar main main main"
+                "footer footer footer footer";
+            grid-gap: 0.2rem;
+            border: 2px solid rgb(214, 203, 203);
+            border-bottom: 1px solid white;
+            border-radius: 1px solid white;
+        }
+
+        nav {
+            background-color: rgb(63, 62, 62);
+            grid-area: nav;
+            padding:10px;
+            text-align: center;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        .sidebar {
+            background-color: rgb(63, 62, 62);
+            grid-area: sidebar;
+            height:425px;
+            width:300px;
+        }
+
+        .content1 {
+            background-color: rgb(252, 248, 248);
+            grid-area: content1;
+        }
+
+        .content2 {
+            background-color: rgb(252, 248, 248);
+            grid-area: content2;
+        }
+
+        .content3 {
+            background-color: rgb(253, 247, 247);
+            grid-area: content3;
+        }
+
+        .sidebar div {
+            padding: 15px 20px;
+            color: white;
+
+        }
+        footer{
+            background-color: rgb(63, 62, 62);
+            height:80px;
+            font-size: 20px;
+            color:white;
+            align-content:end;
+            text-align: center;
+            padding-bottom: 20px;
+            
+        }
+
+        nav h1 {
+            color: white;
+        }
+
+        main p {
+            color: gray
+        }
+
+    
+
+    </style>
+</head>
+
+<body>
+    <!-- CSS 127: Build a two-column dashboard layout with a header, sidebar, 
+    and footer.  -->
+    
+    <div class="container">
+        <nav>
+            <h1>Dashboard</h1>
+        </nav>
+        <main>
+            <h3>Welcome to the Dashboard</h3>
+            <p>This is a responsive dashboard layout using css grid</p>
+        </main>
+        <div class="sidebar">
+            <div class="home">Home</div>
+            <div class="analytics">Analytics</div>
+            <div class="settings">settings</div>
+            <div class="logout">logout</div>
+        </div>
+       
+    </div>
+
+      <footer>
+        <div>© 2025  | All rights reserved</div>
+      </footer> 
+
+</body>
+
+</html>
