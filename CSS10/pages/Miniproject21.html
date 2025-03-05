@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 10px;
+            padding: 10px;
+            width: 60%;
+            height: 600px;
+            display: grid;
+            grid-template-columns: 25% 1fr 1fr;
+            grid-template-rows: 25% 25% 25% 25%;
+            /* border: 1px solid red; */
+        }
+
+        /* .container div {
+            border: 1px solid green;
+
+        } */
+
+        .col2 {
+            grid-row: span 2;
+
+        }
+
+        .col4 {
+            grid-row: span 2;
+
+        }
+
+        .col5 {
+            grid-row: span 2;
+
+        }
+
+        .col6 {
+            grid-row: span 2;
+
+        }
+
+        .container img {
+            width: 200px;
+            height: 100px;
+        }
+
+        .col1 img {
+            width: 250px;
+            height: 150px;
+        }
+
+        .col2 img {
+            width: 300px;
+            height: 290px;
+        }
+
+        .col3 img {
+            width: 290px;
+            height: 150px;
+        }
+
+        .col4 img {
+            width: 200px;
+            height: 290px;
+        }
+
+        .col5 img {
+            width: 290px;
+            height: 290px;
+        }
+
+        .col6 img {
+            width: 300px;
+            height: 280px;
+        }
+
+        .col7 img {
+            width: 200px;
+            height: 140px;
+        }
+
+        .col8 img {
+            width: 290px;
+            height: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="col1"><img src="../assets/images/girlfrock2.jpg"></div>
+            <div class="col2"><img src="../assets/images/boy overcoat.jpg"></div>
+            <div class="col3"><img src="../assets/images/boy shirt and pant.jpg"></div>
+            <div class="col4"><img src="../assets/images/blazer.jpg"></div>
+            <div class="col5"><img src="../assets/images/boykid.jpg"></div>
+            <div class="col6"><img src="../assets/images/girlskirt.jpg"></div>
+            <div class="col7"><img src="../assets/images/Women winter wear.jpg"></div>
+            <div class="col8"><img src="../assets/images/girlwinter.jpg"></div>
+
+        </div>
+    </main>
+</body>
+
+</html>
