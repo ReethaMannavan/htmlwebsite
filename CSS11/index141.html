@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index141</title>
+    <style>
+     
+        body {
+            font-size: 20px;
+            font-family: Lato, sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        .main {
+            width: 70%;
+            height: 200vh;
+            min-height: 1000px;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding-left: 10px;
+            position: absolute;
+            left: 25vw;
+        }
+
+        .sidebar {
+            width: 25%;
+            height: 100vh;
+            min-height: 200px;
+            overflow: auto;
+            background: #beddf0;
+            color: #48793c;
+            position: fixed;
+            top: 10px;
+            font-size: 25px;
+        }
+
+        .sticky {
+            padding-left: 30px;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+        }
+
+        h2 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS 141: Add a sticky sidebar that remains visible while scrolling through 
+content. -->
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <h3 class="sticky">
+                GFG Sticky sidebar
+            </h3>
+            <header>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Contact us</li>
+                        <li>Our product</li>
+                    </ul>
+                </nav>
+            </header>
+
+        </div>
+
+        <div class="main">
+            <h2>Main content</h2>
+            <h3>Scroll down the page!</h3>
+            <p>Sidebar sticky on page scroll</p>
+            <p>
+                When the browser window is resized, the labels
+                and inputs will stack on top of each other for
+                smaller screens. To create a responsive inline
+                form using CSS, use a container with flexible
+                styling, such as Flexbox or Grid, to arrange
+                form elements horizontally. Utilize media
+                queries to adjust the layout for smaller
+                screens, ensuring a user-friendly experience
+                across various devices.
+                Discover the transformative power of
+                mastering Data Structures and Algorithms
+                (DSA) as you venture towards becoming a
+                Proficient Developer or Data Scientist.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

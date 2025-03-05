@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject24</title>
+    
+    <style> 
+        .container { 
+            position: relative; /* Reference point for the absolute element */ 
+            width: 200px; 
+            height: 120px; 
+            background-color: rgb(219, 219, 219); 
+            padding: 10px; 
+            border: 2px solid #333; 
+        } 
+ 
+        .absolute-box { 
+            position: absolute; 
+            top: 30px; 
+            left: 70px;  
+            background-color: rgb(172, 172, 172); 
+            padding: 10px; 
+            border-radius:25px; 
+            font-size: 35px;
+           
+        } 
+        .absolute-box1{ 
+            position: absolute; 
+            top: 15px; 
+            left: 95px; 
+            background-color: rgb(219, 10, 10); 
+            padding: 5px; 
+            border-radius:35px; 
+            color:white;
+            font-weight: bolder;
+            font-size: 25px;
+            width:30px;
+            z-index: 1;
+            text-align: center;
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <span class="absolute-box">🔔</span> 
+        <span class="absolute-box1">3</span> 
+       
+    </div> 
+
+</body>
+
+</html>

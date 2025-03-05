@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css136</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid black;
+            gap: 10px;
+            margin-top: 50px;
+            width: 60%;
+            height: 100vh;
+            position:relative;
+          
+        }
+
+        .item1 {
+           
+            background-color: antiquewhite;
+            width: 150px;
+            height: 200px;
+            text-align: center;
+            align-content: center;
+            position: relative;
+            top:20px;
+            left:50px;
+            z-index:5;
+        }
+        .item2 {
+           
+            background-color: antiquewhite;
+            position:absolute;
+            width: 150px;
+            height: 200px;
+            text-align: center;
+            align-content: center;
+            z-index:1;
+            top:50px;
+            left:200px;
+        }
+        img{
+            height:300px;
+            width: 250px;
+            border-radius: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- CSS 136: Use z-index to position overlapping elements (e.g., a modal 
+      above a background).  -->
+
+    <main>
+        <div class="container">
+            <div class="item1">
+               <img src="./assets/images/cloth.jpeg">
+            </div>
+            <div class="item2">
+                <img src="./assets/images/private gatherings.jpg">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

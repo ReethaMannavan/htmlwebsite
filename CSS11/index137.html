@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css137</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid black;
+            gap: 10px;
+            margin-top: 20px;
+            width: 40%;
+            height: 60vh;
+            font-size: 20px;
+
+        }
+
+        span[data-descr] {
+            position: relative;
+            text-decoration: underline;
+            color: #00f;
+        
+        }
+
+        span[data-descr]:hover::after,
+        span[data-descr]:focus::after {
+            content: attr(data-descr);
+            position: absolute;
+            left: 0;
+            top: 24px;
+            min-width: 200px;
+            border: 1px #aaaaaa solid;
+            border-radius: 10px;
+            background-color: #ffffcc;
+            padding: 12px;
+            color: #000000;
+            
+           
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS 137: Create a highlighted text that reveals additional info on hover 
+          using ::after pseudo-element  -->
+    <main>
+        <div class="container">
+            <p>
+                Here we have a
+                <span tabindex="0" data-descr="Python Full stack">
+                    Course
+                </span>
+                with
+                <span tabindex="0" data-descr="Html,Css,Javascript,Mysql">
+                    details</span>
+            </p>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css134</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            /* border: 3px solid rgb(204, 10, 10); */
+            margin-top: 20px;
+            width: 100%;
+            height: 150vh;
+        }
+
+        .fixed-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(104, 104, 104, 0.918);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            align-content: center;
+            font-size: 20px;
+            height: 60px;
+        }
+
+        .content {
+            margin-top: 50px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS 134: Create a fixed navigation bar that stays visible when scrolling.   -->
+    <div class="container">
+
+        <header>
+            <nav class="fixed-navbar">Fixed Navbar</nav>
+
+        </header>
+
+        <main>
+            <div class="content">
+                <h1>Content Goes Here...</h1>
+                <br>
+                <p>The element is positioned relative to the viewport and does not
+                    move when scrolling.
+                    <br>
+                    Real-world Scenario: Use for sticky navigation bars or floating banners.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

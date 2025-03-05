@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css140</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid rgb(212, 45, 45);
+            gap: 10px;
+            margin-top: 20px;
+            width: 60%;
+            height: 50vh;
+
+        }
+
+        nav ul {
+            padding:20px;
+            list-style: none;
+            position: relative;
+            font-size:25px;
+            font-weight: bold;
+            color:rgb(139, 11, 129)
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS 140: Create a dropdown menu using absolute positioning.  -->
+     <div class="container">
+    <nav>
+        <ul>
+            <li class="dropdown">
+                Menu
+                <ul class="dropdown-content">
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    </div>
+</body>
+
+</html>

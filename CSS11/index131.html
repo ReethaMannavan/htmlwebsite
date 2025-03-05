@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css131</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid black;
+            gap: 10px;
+            margin-top: 20px;
+            width: 60%;
+            height: 100vh;
+          
+        }
+
+        .item1 {
+            border: 5px solid red;
+            background-color: antiquewhite;
+            position:static;
+            width: 150px;
+            height: 200px;
+            text-align: center;
+            align-content: center;
+            top:20px;
+            left:40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS 131: Create a static element and observe how it behaves in the 
+    normal document flow.  -->
+    <main>
+        <div class="container">
+            <div class="item1">
+                Static Content
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

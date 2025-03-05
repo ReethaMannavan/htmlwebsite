@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css133</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid rgb(204, 10, 10);
+            gap: 10px;
+            margin-top: 20px;
+            width: 60%;
+            height: 60vh;
+            position :relative;
+
+        }
+
+        .item1 {
+            border: 5px solid rgb(66, 36, 238);
+            background-color: antiquewhite;
+            position:absolute;
+            width: 150px;
+            height: 200px;
+            text-align: center;
+            align-content: center;
+            top:180px;
+            left:81%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS 133: Add an absolute element inside a relative parent and position it 
+         in the bottom-right corner.   -->
+
+    <main>
+        <div class="container">Relative
+            <div class="item1">Absolute
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
