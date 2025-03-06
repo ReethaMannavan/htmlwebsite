@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css155</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid rgb(172, 39, 39);
+            gap: 10px;
+            width: 50%;
+            height: 60vh;
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            transform: translate(50%,50%);
+            opacity: 0.1;
+           
+        }
+
+
+        .fade-in-img{
+            border: 5px solid rgb(197, 21, 80);
+            background-color: rgb(144, 221, 44);
+            position: static;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            align-content: center;
+            position: absolute;
+            transform: translate(160%, 50%);
+
+        }
+
+        .fade-in-image img:hover{
+            font-family: Arial;
+            font-size: 25px;
+            font-weight: bolder;
+            animation: fadeIn 3s ease-in-out;
+        }
+        
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--CSS 155. Use opacity to create a hidden image that fades in on hover.     -->
+
+    <main>
+        <div class="container">
+            <div class="fade-in-image"><img src="./assets/images/Restaurant.jpg"></div>
+
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css146</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid rgb(172, 39, 39);
+            gap: 10px;
+           
+            width: 50%;
+            height: 60vh;
+            position: relative;
+        }
+
+        .image {
+            position:absolute;
+            transition: filter 0.3s ease;
+            transform: translate(100%,50%)
+        }
+
+        .image:hover {
+            filter: grayscale(100%) brightness(80%);
+        }
+    </style>
+</head>
+
+<body>
+    <!--CSS 146. Apply a grayscale filter to an image on hover.     -->
+
+    <main>
+        <div class="container">
+            <div class="image"><img src="./assets/images/birthday event.jpg"></div>
+
+        </div>
+    </main>
+</body>
+
+</html>

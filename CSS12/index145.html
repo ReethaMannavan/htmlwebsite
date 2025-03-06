@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css144</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid black;
+            gap: 10px;
+            margin-left: 80px;
+            width: 50%;
+            height: 60vh;
+            position: relative;
+
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            width: 180px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            position: absolute;
+            top:50%;
+            left:40%;
+            text-align: center;
+          
+
+        }
+
+        .btn:hover {
+            background-color: #2ecc71;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!--CSS 145. Animate a button to grow in size using transform: scale().    -->
+
+    <main>
+        <div class="container">
+
+            <div class="btn">Submit</div>
+
+        </div>
+    </main>
+</body>
+
+</html>

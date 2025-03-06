@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css147</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+        body{
+            position: relative;
+        }
+
+        .header {
+
+            width: 100%;
+            padding: 35px 12%;
+            background: rgb(134, 190, 49);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgb(34, 5, 3);
+            position:sticky;
+            top:0;
+            z-index:1;
+
+        }
+
+        .navbar a {
+            font-size: 25px;
+            color: rgb(92, 50, 12);
+            font-weight: 500;
+            margin: 0 20px;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid transparent;
+        }
+
+    
+        .navbar a:hover{
+            opacity: 0.3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--CSS 147. Create a navigation bar with a hover blur effect.   -->
+
+    <header class="header">
+
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Experiences</a>
+            <a href="#solutions">Projects</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+</body>
+
+</html>

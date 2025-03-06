@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css151</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid rgb(172, 39, 39);
+            gap: 10px;
+            width: 50%;
+            height: 60vh;
+            position: relative;
+        }
+
+        .rotating-icon {
+            display: inline-block;
+        }
+
+        @keyframes rotateScale {
+        
+            from { transform: rotate(0deg); } 
+            to { transform: rotate(360deg); } 
+        }
+
+        .element {
+            animation: rotateScale 5s linear infinite;
+    
+        }
+    
+    </style>
+</head>
+
+<body>
+    <!--CSS 151. Use @keyframes to rotate an icon continuously.   -->
+
+    <main>
+        <main>
+            <div class="container">
+                <div class="element rotating-icon"><img src="./assets/images/loadingicon.jpeg"></div>
+            </div>
+        </main>
+</body>
+
+</html>

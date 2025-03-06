@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css153</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            /* border: 3px solid black; */
+            gap: 10px;
+            margin-top: 20px;
+            width: 60%;
+            height: 60vh;
+
+        }
+
+        .slide-in-text {
+            border: 10px solid #2fce57;
+            background-color: rgb(238, 80, 114);
+            position: static;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            align-content: center;
+            position: absolute;
+            transform: translate(160%, 50%);
+
+        }
+
+        .slide-in-text p{
+            font-family: Arial;
+            font-size: 25px;
+            font-weight: bolder;
+            animation: slide-in 2s ease infinite;
+            transform-origin: top center;
+        }
+    
+
+        @keyframes slide-in{
+            from {
+                transform: translateY(-100%) scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--CSS 153. Create a hover effect where text slides in with opacity.  -->
+
+    <main>
+        <div class="container">
+            <div class="slide-in-text">
+                <p>Slide-in Text</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

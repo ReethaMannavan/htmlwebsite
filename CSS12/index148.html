@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css148</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            border: 3px solid black;
+            margin-top: 20px;
+            width: 50%;
+            height: 60vh;
+            position: relative;
+          
+        }
+
+        .element{
+            border: 5px solid red;
+            background-color: rgb(153, 10, 117);
+            position:static;
+            width: 180px;
+            height: 160px;
+            text-align: center;
+            align-content: center;
+            top:20px;
+            left:40px;
+            position: absolute;
+            transform: translate(100%,50%)
+
+    
+        }
+        .element:hover{
+            opacity: 0.3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--CSS 148. Fade out an element when clicked using opacity.  -->
+<main>
+    <div class="container">
+        <div class="element">
+            Fade Out
+        </div>
+    </div>
+</main>
+</body>
+
+</html>

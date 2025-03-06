@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css150</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 3px solid rgb(172, 39, 39);
+            gap: 10px;
+           
+            width: 50%;
+            height: 60vh;
+            position: relative;
+        }
+
+        .image {
+            position:absolute;
+            transform: translate(70%,50%)
+        }
+
+        .image:hover {
+            filter: brightness(2.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!--CSS 150. Add a brightness filter to images on hover.   -->
+
+    <main>
+        <main>
+            <div class="container">
+                <div class="image"><img src="./assets/images/concert.jpg"></div>
+    
+            </div>
+        </main>
+</body>
+
+</html>

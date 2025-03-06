@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject 24</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .container {
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            background-color: rgb(85, 228, 228);
+            width: 60%;
+            height: 30vh;
+            position: relative;
+
+        }
+
+        .item {
+            position: absolute;
+            transform: translate(10%, 70%);
+
+        }
+
+        .btn {
+            font-weight: bold;
+            color: white;
+            font-size: 15px;
+            width: 160px;
+            height: 50px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+        }
+
+        .btn1:hover {
+            background-color: #ff6392;
+            transform: scale(1.1);
+        }
+        .btn2:hover {
+            background-color: #663ef7;
+            transform: scale(1.1);
+        }
+        .btn3:hover {
+            background-color: #ca22da;
+            transform: scale(1.1);
+        }
+        .btn4:hover {
+            background-color: #11ad6c;
+            transform: scale(1.1);
+        }
+
+        .btn1 {
+            background-color: rgb(42, 130, 133);
+            border: 1px solid rgb(68, 241, 247)
+        }
+
+        .btn2 {
+            background-color: rgb(31, 170, 85);
+            border: 1px solid rgb(42, 130, 133);
+        }
+
+        .btn3 {
+            background-color: rgb(243, 48, 48);
+            border: 1px solid rgb(243, 48, 48);
+        }
+
+        .btn4 {
+            background-color: rgb(243, 230, 41);
+            border: 1px solid rgb(243, 230, 41)
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="item">
+                <button class="btn btn1">Primary Button</button>
+                <button class="btn btn2">Secondary Button</button>
+                <button class="btn btn3">Danger Button</button>
+                <button class="btn btn4">Warning Button</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
