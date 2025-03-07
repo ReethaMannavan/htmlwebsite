@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css165</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .footer {
+
+            width: 100%;
+            padding: 25px 0;
+            background-color: rgba(12, 12, 12, 0.877);
+            position: fixed;
+            bottom: 0;
+        }
+
+        .footer .social {
+            text-align: center;
+            padding-bottom: 25px;
+            color: white;
+        }
+
+        .footer .social a {
+            font-size: 24px;
+            border: 2px solid orangered;
+            color: white;
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
+
+        }
+
+        .footer ul {
+            margin-top: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            justify-content: center;
+            display: flex;
+        }
+
+        .footer ul li a {
+            color: white;
+            border-bottom: 3px solid transparent;
+        }
+
+        .footer ul li {
+            display: inline-block;
+            padding: 0 15px;
+        }
+
+        .footer .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+        }
+
+
+
+        @media(max-width:767px) {
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            ul {
+                flex-direction: row;
+                align-items: center;
+
+            }
+
+        }
+
+        @media(min-width:1024px) {
+            ul {
+                flex-direction: row;
+                align-items: center;
+            }
+
+        }
+    </style>
+</head>
+<!-- CSS 165: Responsive Footer -->
+
+<body>
+    
+
+
+    <footer class="footer">
+
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">About Me</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+        <p class="copyright"> © 2025 My Portfolio | All rights reserved</p>
+    </footer>
+</body>
+
+</html>

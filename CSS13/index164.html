@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css164</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 20px;
+            font-family: Lato, sans-serif;
+        }
+        .image{
+            width:60%;
+        }
+
+      
+
+        @media(max-width:767px) and (orientation:portrait) {
+            .image{
+                width:50%;
+                filter:grayscale(1.2)
+            }
+         
+        
+        }
+
+        @media(min-width:768px) and (max-width:1023px) and (orientation:landscape) {
+            .image{
+                width:70%;
+                transform: scale(1.2);
+            
+            }
+        }
+
+        @media(min-width:1024px) and (orientation:landscape) {
+            .image{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<!-- CSS 164: Orientation-Specific Styles  -->
+
+<body>
+    <div class="image">
+        <img src="./assets/images/santorini greece.jpg">
+    </div>
+    
+</body>
+
+</html>

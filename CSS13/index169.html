@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css169</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(185, 252, 252);
+            width:100%
+        }
+        .para{
+            color:brown;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 15px;
+            margin:20px;
+            padding:20px;
+            width:50%;
+        }
+
+
+
+
+        /* @media (max-width:767px) {
+          
+        } */
+
+        @media(min-width:768px) and (orientation:landscape) and (max-width:1023px) {
+            .para{
+                width:100%;
+            }
+        }
+
+        @media(min-width:1920px) {
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="para">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque eaque corporis dicta hic dolorem
+            explicabo, atque culpa iusto quos ipsum, repellendus quisquam. Repudiandae voluptas sint quia fuga nostrum
+            animi, similique laudantium numquam dicta architecto doloremque culpa tempore veritatis! Sapiente magni,
+            corporis repudiandae ut nobis commodi est rem quis voluptatum molestias repellendus quae autem, neque ipsam!
+            Mollitia veniam earum laborum asperiores ratione, unde provident porro aperiam tempora, delectus rem
+            incidunt nobis, quisquam at architecto totam libero nulla dolorum repellat! Reprehenderit cupiditate, quos
+            nobis harum necessitatibus, distinctio, sapiente accusantium perferendis illum cumque deleniti voluptates
+            ipsam nulla similique vel dolores aperiam laudantium.</p>
+    </div>
+
+
+</body>
+
+</html>

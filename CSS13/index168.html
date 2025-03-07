@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css168</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 20px;
+            font-family: Lato, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+            gap: 20px;
+            background-color: aquamarine;
+        }
+
+        .para {
+            color: blue;
+        }
+
+        .para1 {
+            color: rgba(250, 28, 20, 0.884);
+        }
+
+        img {
+            height: 200px;
+            width: 350px;
+        }
+
+        @media print,
+        (max-width:767px) {
+            img {
+                display: none;
+
+            }
+
+            .container {
+                background: none;
+            }
+
+            p {
+                color: black;
+            }
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            img {
+                display: none;
+
+            }
+
+            .container {
+                background: none;
+            }
+
+            p {
+                color: black;
+            }
+
+        }
+
+        @media(min-width:1024px) {}
+    </style>
+</head>
+<!-- CSS 168: Media Query for Print   -->
+
+<body>
+    <div class="container">
+
+        <div class="image">
+            <img src="./assets/images/wedding event1.jpeg">
+            <img src="./assets/images/Restaurant.jpg">
+            <img src="./assets/images/food.jpeg">
+        </div>
+        <div class="para">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cum fuga eius eaque error ipsam
+                debitis eos, accusantium dolores incidunt, qui placeat porro vitae provident corporis reprehenderit iste
+                ut ratione sed similique veniam unde. Mollitia sit, exercitationem iste, distinctio dolores voluptatem
+                at, vel facilis cum eaque commodi rem accusamus natus?</p>
+        </div>
+        <div class="para1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cum fuga eius eaque error ipsam
+                debitis eos, accusantium dolores incidunt, qui placeat porro vitae provident corporis reprehenderit iste
+                ut ratione sed similique veniam unde. Mollitia sit, exercitationem iste, distinctio dolores voluptatem
+                at, vel facilis cum eaque commodi rem accusamus natus?</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

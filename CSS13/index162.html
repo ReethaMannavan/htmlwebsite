@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css162</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .items {
+            margin: 20px;
+
+
+        }
+
+        .btn {
+            border: 2px solid rgb(194, 45, 119);
+            width: 160px;
+            height: 70px;
+            font-size: 18px;
+            text-align: center;
+
+        }
+
+        @media(max-width:767px) {
+            .btn {
+                padding: 10px;
+                font-size: 12px;
+            }
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            .btn {
+                padding: 15px;
+                font-size: 18px;
+            }
+        }
+
+        @media(min-width:1024px) {
+            .btn {
+                padding: 20px;
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<!-- CSS 162: Responsive Button Sizes -->
+
+<body>
+    <div class="container">
+        <div class="items">
+            <button class="btn">Login</button>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

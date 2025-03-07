@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            height:100vh;
+        }
+
+        nav {
+            background-color: rgba(68, 63, 63, 0.877);
+            color: white;
+            padding: 10px;
+            /* position: fixed; */
+            width:100%;
+           
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        ul li {
+            padding: 10px;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .landing {
+        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            background-color: rgb(75, 255, 39);
+            color: white;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), 
+            url('../assets/images/headset\ final.png');
+            background-repeat: no-repeat;
+           
+        }
+
+        .content {
+            max-width: 50%;
+            text-align: left;
+            position:absolute;
+            right:0px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 3s 1s ease-in-out forwards;
+        }
+
+        .cta-btn {
+            padding: 10px 20px;
+            background-color: #6b6b6b;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: all 0.3s ease-out;
+
+        }
+
+        .cta-btn:hover {
+            background-color: #f35151;
+            color: #222;
+            transform: translateY(-5px);
+            transform: scale(1.2);
+        }
+
+
+        .headset-image {
+            position: relative;
+            max-width: 40%;
+        }
+
+        .headset {
+            width: 100%;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .headset:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2) contrast(1.1);
+        }
+
+
+        .headset {
+
+            transition: all 0.3s ease;
+        }
+
+        .headset:hover {
+            transform: scale(1.2);
+        }
+
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .products{
+            height:100vh;
+        }
+
+        .product {
+            display: grid;
+            grid-template-columns: 25% 1fr 1fr 1fr;
+            grid-template-rows: 25% 25% 25%;
+        }
+
+        .products h2 {
+            text-align: center;
+            color: rgb(100, 100, 100);
+            font-weight: bolder;
+        }
+
+        .items img {
+            width: 270px;
+            height: 250px;
+         
+        
+        }
+
+        img:hover{
+            /* transform: rotateY(180deg); */
+               transform: scale(1.2);
+        }
+
+        .item1 {
+            width: 350px;
+        }
+
+        .items div {
+            justify-content: center;
+            align-content: center;
+            align-self: center;
+            text-align: center;
+        }
+
+        .items h3 {
+            color: grey;
+        }
+
+        .item4 img {
+            width: 200px;
+        }
+
+        .items button {
+            padding: 10px 20px;
+            background-color: #3fc424;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: 1px solid #3fc424;
+            transition: all 0.3s ease;
+           
+
+        }
+
+        .redbtn:hover {
+            background-color: #f35151;
+            color: #222;
+            transform: translateY(-5px);
+            transform: scale(1.2)
+        }
+
+        .greenbtn:hover {
+            background-color: #f35151;
+            color: #222;
+            transform: translateY(-5px);
+            transform: scale(1.2)
+        }
+
+        .purplebtn:hover {
+            background-color: #f35151;
+            color: #222;
+            transform: translateY(-5px);
+            transform: scale(1.2)
+        }
+
+        .blackbtn:hover {
+            background-color: #f35151;
+            color: #222;
+            transform: translateY(-5px);
+            transform: scale(1.2)
+        }
+
+
+
+        .footer {
+
+            width: 100%;
+            padding: 25px 0;
+            background-color: rgba(58, 57, 57, 0.877);
+
+        }
+
+        .footer .social {
+            text-align: center;
+            padding-bottom: 25px;
+            color: white;
+        }
+
+        .footer .social a {
+            font-size: 24px;
+            border: 2px solid orangered;
+            color: white;
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
+
+        }
+
+        .footer ul {
+            margin-top: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            justify-content: center;
+            display: flex;
+        }
+
+        .footer ul li a {
+            color: white;
+            border-bottom: 3px solid transparent;
+        }
+
+        .footer ul li {
+            display: inline-block;
+            padding: 0 15px;
+        }
+
+        .footer .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+        }
+
+
+        @media (max-width: 768px) {
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .product{
+                display: grid;
+                grid-template-columns: 100%;
+            }
+            .landing h1,p,button{
+                font-size: 12px;
+            }
+
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            ul {
+                flex-direction: row;
+                align-items: center;
+            }
+            .product{
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+        }
+
+        @media(min-width:1024px) {
+            ul {
+                flex-direction: row;
+                align-items: center;
+            }
+            li a:hover{
+                color:rgb(211, 49, 84);
+                background-color: #3fc424;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="landing">
+            <div class="content">
+                <h1>Experience Immersive Sound</h1>
+                <p>Introducing the best headset for ultimate audio experience. Comfortable, powerful, and stylish.</p>
+                <br><br>
+                <a href="#buy-now" class="cta-btn">Buy Now</a>
+            </div>
+        </section>
+        <br><br>
+
+        <section class="products">
+            <h2>Similar Products</h2>
+            <br><br>
+            <div class="product">
+                <div class="items">
+                    <div class="item1"><img src="../assets/images/red.jpg"></div>
+                    <div class="h-one">
+                        <h3>Beat Studio Wireless <br> Headset</h3>
+                    </div><br>
+                    <div class="para">
+                        <p>$499</p>
+
+                        <button class="redbtn">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="items">
+                    <div class="item2"><img src="../assets/images/green.jpg"></div>
+                    <div class="h-one">
+                        <h3>Beat Studio Pro Wireless <br>Headset</h3>
+                    </div><br>
+                    <div class="para">
+                        <p>$399</p>
+
+                        <button class="greenbtn">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="items">
+                    <div class="item3"><img src="../assets/images/purple.jpg"></div>
+                    <div class="h-one">
+                        <h3>Beat Solo Wireless <br>Headset</h3>
+                    </div><br>
+                    <div class="para">
+                        <p>$550</p>
+
+                        <button class="purplebtn">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="items">
+                    <div class="item4"><img src="../assets/images/black.jpg"></div>
+                    <div class="h-one">
+                        <h3>Beat Solo4 Wireless<br> Headset</h3>
+                    </div><br>
+                    <div class="para">
+                        <p>$605</p>
+
+                        <button class="blackbtn">Buy Now</button>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <br><br><br>
+
+    <footer class="footer">
+
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">About Me</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+        <p class="copyright"> © 2025 My Portfolio | All rights reserved</p>
+    </footer>
+</body>
+
+</html>

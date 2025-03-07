@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css161</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       .items{
+     
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+       }
+
+       .item1,.item2,.item3{
+        border:2px solid greenyellow;
+        height:50px;
+       align-content: center;
+       
+       }
+
+        @media(max-width:767px) {
+
+            .item{
+             width:100%;
+            }
+
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            .item{
+             width:50%;
+            }
+
+        }
+
+        @media(min-width:1024px) {
+            .item{
+             width:33%;
+            }
+
+          
+        }
+    </style>
+</head>
+<!-- CSS 161: Layout Adjustments  -->
+
+<body>
+    <div class="container">
+        <div class="items">
+            <div class="item item1">Item1</div>
+            <div class="item item2">Item2</div>
+            <div class="item item3">Item3</div>
+        </div>
+    </div>
+</body>
+
+</html>

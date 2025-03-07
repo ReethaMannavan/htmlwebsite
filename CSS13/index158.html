@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css158</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    
+    @media(max-width:767px)
+    {
+       h1{
+        font-size: 20px;
+       }
+       p{
+        font-size: 14px;
+       }
+    }
+    @media(min-width:768px) and (max-width:1023px)
+    {
+        h1{
+        font-size: 30px;
+       }
+       p{
+        font-size: 18px;
+       }
+    }
+    @media(min-width:1024px)
+    {
+        h1{
+        font-size: 40px;
+       }
+       p{
+        font-size: 22px;
+       }
+    }
+    </style>
+</head>
+
+<!-- CSS 158: Responsive Font Sizes 
+o Adjust the font size of headings and paragraphs based on screen 
+sizes: 
+ Small screen: Heading 20px, paragraph 14px 
+ Medium screen: Heading 30px, paragraph 18px 
+ Large screen: Heading 40px, paragraph 22px  -->
+<body>
+    <div class="container">
+        <h1>This is Heading</h1><br>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, assumenda!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css167</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #contact form {
+            max-width: 100%;
+            /* margin: 1rem auto; */
+            text-align: left;
+            margin-bottom: 3em;
+            padding: 10px 20px;
+
+        }
+
+        .name,
+        .mail,
+        .number {
+            padding: 5px;
+            width: 300px;
+            height: 50px;
+            border: 2px solid gray;
+            border-radius: 15px;
+
+        }
+
+        .msg {
+            border-radius: 10px;
+            border: 2px solid gray;
+            width: 300px;
+
+        }
+
+        .btn {
+            width: 200px;
+            height: 3rem;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            /* background:linear-gradient(to right,rgb(105, 232, 255),rgb(255, 130, 213)); */
+            background-color: rgb(85, 141, 0);
+        }
+
+        .items {
+
+            text-align: center;
+        }
+
+
+
+
+        @media(max-width:767px) {
+
+            .item{
+             display: flex;
+             flex-direction: column;
+            }
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            .item{
+               
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            
+            }
+        }
+
+        @media(min-width:1024px) {
+            .item{
+          
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<!-- CSS 167: Responsive Forms  -->
+
+<body>
+    <main>
+        <section id="contact">
+            <form>
+
+                <legend style="font-size: 30px;">Have Some Questions?</legend>
+                <br><br>
+                <div class="items item"><input class="name" type="text" id="text" name="text"
+                        placeholder="Enter Your Name"></div><br>
+                <!-- <label for="text">Full Name:</label> -->
+                <div class="items item">
+                    <input class="name" type="text" id="text" name="text" placeholder="Enter Your Name">
+                </div><br>
+
+                <!-- <label for="email">Email:</label> -->
+                <div class="items item">
+                    <input class="mail" type="email" id="email" name="email" placeholder="Enter Valid Mail id">
+                </div> <br>
+                <!-- <label for="text">Phone number:</label> -->
+                <div class="items item">
+                    <input class="number" type="text" id="text" name="number" placeholder="Enter 10-digit number">
+                </div> <br>
+                <!-- <label for="message"> Address:</label> -->
+                <div class="items item">
+                    <textarea class="msg" id="message" name="message" rows="6" cols="35" required
+                        placeholder="Type Message">
+                    </textarea>
+                </div>
+                <br>
+                <div class="items item">
+                    <button class="btn" type="submit">Send Message</button>
+                </div><br>
+
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>

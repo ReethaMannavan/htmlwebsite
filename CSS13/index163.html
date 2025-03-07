@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css163</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 20px;
+            font-family: Lato, sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        .main {
+            width: 70%;
+            height: 200vh;
+            min-height: 800px;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding-left: 10px;
+            position: absolute;
+            left: 25vw;
+        }
+
+        .sidebar {
+            width: 25%;
+            height: 100vh;
+            min-height: 200px;
+            overflow: auto;
+            background: #beddf0;
+            color: #48793c;
+            position: fixed;
+            top: 10px;
+            font-size: 25px;
+        }
+
+
+        li {
+            list-style: none;
+            padding: 10px;
+        }
+
+
+        @media(max-width:767px) {
+            .sidebar
+            {
+                display: none;
+            }
+        
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+         
+        }
+
+        @media(min-width:1024px) {
+           
+        }
+    </style>
+</head>
+<!-- CSS 163: Show/Hide Elements  -->
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h3 class="sticky"></h3>
+            <header>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Contact us</li>
+                        <li>Our product</li>
+                    </ul>
+                </nav>
+            </header>
+
+        </div>
+    
+</body>
+
+</html>
