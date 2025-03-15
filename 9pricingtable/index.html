@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            background: linear-gradient(rgb(78, 243, 221), rgb(219, 55, 219));
+        }
+
+        .plan h1 {
+            font-size: 50px;
+            font-weight: bolder;
+
+        }
+
+        .plan p {
+            font-size: 25px;
+            font-weight: bolder;
+
+        }
+
+        .basic,
+        .Standard,
+        .Premium {
+            background-color: white;
+        }
+
+        .item1,
+        .item2,
+        .item3 {
+            margin-top: 20px;
+            margin-left: 50px;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid rgb(228, 37, 117);
+            height: 75vh;
+            width: 60%;
+
+        }
+
+        header {
+            background-color: rgb(255, 108, 194);
+            height: 90px;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .btn {
+            width: 200px;
+            height: 3rem;
+            color: rgb(77, 76, 76);
+            font-size: 20px;
+            border-radius: 10px;
+            border: 3px solid #ce74a1;
+            box-shadow: 0 0 10px #ad0755;
+            /* background:linear-gradient(to right,rgb(105, 232, 255),rgb(255, 130, 213)); */
+            /* background-color: rgb(255, 21, 99); */
+        }
+
+        .submit {
+            width: 100px;
+            height: 2rem;
+            color: rgba(8, 14, 94, 0.801);
+            font-size: 20px;
+            border-radius: 10px;
+            border: 3px solid #2124df;
+            box-shadow: 0 0 10px #ad0755;
+        }
+
+        .item2 {
+
+            filter: brightness(1);
+            border: 5px solid blueviolet;
+            box-shadow: 0 0 25px blueviolet;
+        }
+
+        button:hover {
+            transform: scale(1.2);
+        }
+
+        .item2:hover {
+            filter: brightness(100%);
+            transform: scale(1.2);
+        }
+
+        .plan h1,
+        p {
+            color: rgb(10, 10, 107);
+        }
+
+        @media(max-width:767px) {
+
+            .container {
+                display: grid;
+                grid-template-columns: 100%;
+                font-size: 12px;
+            }
+            .btn,.submit{
+                max-width: 100%;
+                font-size: 12px;
+            }
+            button:hover{
+                transform: none;
+            }
+           
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+
+
+            .container {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                font-size: 12px;
+                
+            }
+            button:hover{
+                transform: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pricing Table</h1>
+    </header>
+    <br>
+    <main>
+        <div class="container">
+            <div class="item1">
+                <div class="basic plan">
+                    <h1>15$</h1>
+                    <p>Basic Plan</p>
+                </div><br><br>
+
+                <div><button class="btn btn1">5 Users</button></div><br>
+                <div><button class="btn btn1">20GB Storage</button></div><br>
+                <div><button class="btn btn1">Unlimited Plans</button></div><br>
+                <div><button class="btn btn1">2 Domains</button></div><br>
+
+                <div>
+                    <button class="submit">Sign Up</button>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="Standard plan">
+                    <h1>45$</h1>
+                    <p>Standard Plan</p>
+                </div><br><br>
+
+                <div><button class="btn btn1">5 Users</button></div><br>
+                <div><button class="btn btn1">40GB Storage</button></div><br>
+                <div><button class="btn btn1">Unlimited Plans</button></div><br>
+                <div><button class="btn btn1">3 Domains</button></div><br>
+
+                <div>
+                    <button class="submit">Sign Up</button>
+                </div>
+            </div>
+            <div class="item3">
+                <div class="Premium plan">
+                    <h1>65$</h1>
+                    <p>Premium Plan</p>
+                </div><br><br>
+
+                <div><button class="btn btn1">6 Users</button></div><br>
+                <div><button class="btn btn1">60GB Storage</button></div><br>
+                <div><button class="btn btn1">Unlimited Plans</button></div><br>
+                <div><button class="btn btn1">4 Domains</button></div><br>
+
+                <div>
+                    <button class="submit">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
