@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>portfolio contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .header {
+
+            width: 100%;
+            padding: 35px 12%;
+            background: rgba(20, 20, 20, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            color: orange;
+
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: white;
+            font-weight: 500;
+            margin: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            border-bottom: 3px solid transparent;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: tomato;
+
+        }
+
+        .footer {
+            
+            width: 100%;
+            padding: 25px 0;
+            background-color: rgba(46, 46, 46, 0.877);
+        }
+
+        .footer .social {
+            text-align: center;
+            padding-bottom: 25px;
+            color: white;
+        }
+
+        .footer .social a {
+            font-size: 24px;
+            border: 2px solid orangered;
+            color: white;
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
+            
+        }
+
+        .footer ul {
+            margin-top: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .footer ul li a {
+            color: white;
+            border-bottom: 3px solid transparent;
+        }
+
+        .footer ul li {
+            display: inline-block;
+            padding: 0 15px;
+        }
+
+        .footer .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+        }
+
+        .contact form {
+            max-width: 50em;
+            margin: 1rem auto;
+            text-align: center;
+            margin-bottom: 3em;
+
+        }
+
+        .name,
+        .mail,
+        .number {
+            padding:5px;
+            width: 300px;
+            height: 50px;
+            border: 2px solid gray;
+            border-radius: 15px;
+          
+        }
+        .msg{
+            border-radius: 10px;
+            border: 2px solid gray;
+            width:300px;
+          
+        }
+
+        .btn {
+            width: 200px;
+            height: 3rem;
+            color:rgb(255, 255, 255);
+            font-size: 20px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            /* background:linear-gradient(to right,rgb(105, 232, 255),rgb(255, 130, 213)); */
+            background-color:rgb(85, 141, 0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>My Portfolio</h1>
+        <nav class="navbar">
+            <a href="/PortfoiloCSS/index.html">Portfolio</a>
+            <a href="#Services">Services</a>
+            <a href="#Experiences">Experiences</a>
+            <a href="#Projects">Projects</a>
+            <a href="/PortfoiloCSS/pages/contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <section class="contact">
+        <form>
+
+            <legend style="font-size: 30px;">Have Some Questions?</legend>
+            <br><br>
+            <!-- <label for="text">Full Name:</label> -->
+            <input class="name" type="text" id="text" name="text" placeholder="Enter Your Name"> <br><br>
+
+            <!-- <label for="email">Email:</label> -->
+            <input class="mail" type="email" id="email" name="email" placeholder="Enter Valid Mail id"> <br><br>
+            <!-- <label for="text">Phone number:</label> -->
+            <input class="number" type="text" id="text" name="number" placeholder="Enter 10-digit number"> <br><br>
+            <!-- <label for="message"> Address:</label> -->
+            <textarea class="msg" id="message" name="message" rows="6" cols="35" required placeholder="Type Message"></textarea>
+            <br><br>
+            <button class="btn" type="submit">Send Message</button><br>
+
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">About Me</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+        <p class="copyright"> © 2025 My Portfolio | All rights reserved</p>
+    </footer>
+</body>
+
+</html>
