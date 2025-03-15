@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+        }
+
+        .header {
+
+            width: 100%;
+            padding: 35px 12%;
+            background: rgba(5, 119, 52, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: orange;
+            position: fixed;
+
+        }
+
+        .header h1 {
+            text-align: left;
+            padding-right: 70px;
+            color: rgb(210, 224, 11);
+        }
+
+        .navbar a {
+            font-size: 22px;
+            color: white;
+            font-weight: 500;
+            margin: 0 20px;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid transparent;
+        }
+
+        .navbar a:hover {
+
+            background-color: rgb(210, 224, 11);
+
+        }
+
+        .navbar h1 {
+            display: inline-block;
+            align-self: left;
+            padding-right: 30px;
+            color: blue;
+            font-weight: bolder;
+        }
+
+        .background {
+            height: 120vh;
+            width: 100vw;
+            background-image: url('./assets/images/background.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+
+        .wildlife {
+            margin: 10px;
+            padding: 10px;
+            width: 70%;
+            height: 155vh;
+            display: grid;
+            grid-template-columns: 40% 20% 20%;
+            grid-template-rows: auto;
+            /* border: 1px solid red; */
+        }
+
+        .row1col1 {
+            grid-row: span 2;
+        }
+
+        .row1col2 {
+            grid-column: span 2;
+        }
+
+        .row1col3 {
+            grid-column: span 2;
+        }
+
+        .row2col1 {
+            grid-column: span 3;
+            grid-row: span 3;
+        }
+
+        .row2col2 {
+            grid-column: span 1;
+
+        }
+
+        .row2col3 {
+            grid-row: span 2;
+        }
+
+        .row3col1 {
+            grid-row: span 2;
+        }
+
+        /* .wildlife img {
+            width: 350px;
+            height: 100px;
+        } */
+
+        .row1col1 img {
+            width: 360px;
+            height: 300px;
+        }
+
+        .row1col2 img {
+            width: 430px;
+            height: 150px;
+
+        }
+
+        .row1col3 img {
+            height: 150px;
+            width: 430px;
+        }
+
+        .row2col1 img {
+            height: 300px;
+            width: 800px;
+
+        }
+
+        .row2col2 img {
+            width: 360px;
+            height: 180px;
+        }
+
+        .row2col3 img {
+            width: 230px;
+            height: 370px;
+
+        }
+
+        .row3col1 img {
+            width: 250px;
+            height: 370px;
+
+        }
+
+        .row3col2 img {
+            width: 360px;
+            height: 180px;
+        }
+
+        #animals {
+            text-align: center;
+            justify-items: center;
+            background-color: rgb(202, 202, 202);
+
+        }
+
+        #animals h1 {
+            color: rgb(60, 129, 28);
+            padding: 10px;
+            text-align: center;
+        }
+
+
+
+
+        .birdphotos {
+            margin: 10px;
+            padding: 10px;
+            width: 60%;
+            height: 600px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 50% 50%;
+            /* border: 1px solid red; */
+        }
+
+        /* .container div {
+            border: 1px solid green;
+
+        } */
+        .col3 {
+            grid-column: span 2;
+        }
+
+        .col4 {
+            grid-column: span 2;
+        }
+
+        .birdphotos img {
+            width: 195px;
+            height: 200px;
+        }
+
+        .col1 img {
+            height: 290px;
+        }
+
+        .col2 img {
+            height: 290px;
+        }
+
+        .col3 img {
+            height: 290px;
+            width: 395px;
+        }
+
+        .col4 img {
+            height: 290px;
+            width: 400px;
+        }
+
+        .col5 img {
+            height: 290px;
+        }
+
+        .col6 img {
+            height: 290px;
+        }
+
+
+        #birds {
+            text-align: center;
+            justify-items: center;
+            background-color: rgb(202, 202, 202);
+
+        }
+
+        #birds h1 {
+            color: rgb(60, 129, 28);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .col1:hover {
+            transform: scale(1.2);
+        }
+
+        .col2:hover {
+            filter: grayscale(100%);
+        }
+
+        .col3:hover {
+            filter: blur(3px);
+        }
+
+        .col4:hover {
+            transform: scale(1.2);
+        }
+
+        .col5:hover {
+            filter: grayscale(100%);
+        }
+
+        .col6:hover {
+            filter: blur(3px);
+        }
+
+        .animal img:hover {
+
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(2);
+            box-shadow: 0 0 50px green;
+            z-index: 10;
+            max-width: 35%;
+            max-height: 35%;
+
+        }
+
+        @media(max-width:767px) {
+
+            .navbar, header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+          
+            }
+
+            img {
+           max-width: 100%;
+
+            }
+
+
+            .wildlife,.birdphotos {
+                display: grid;
+                grid-template-columns: 100%;
+
+            }
+            body{
+                font-size: 10px;
+            }
+            *{
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            .background{
+                background-size: contain;
+                height:30vh;
+           
+            }
+            .header{
+                position:relative;
+            }
+
+        }
+
+
+
+
+        @media(min-width:768px) and (max-width:1023px) {
+            .wildlife,.birdphotos {
+                display: grid;
+                grid-template-columns: 50% 50%;
+
+            }
+            body{
+                font-size: 10px;
+            }
+            *{
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            img{
+                max-width: 100%;
+            }
+            .background{
+                background-size: contain;
+                height:50vh;
+           
+            }
+            .header{
+                position:relative;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Photoshelter</h1>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#collections">Collections</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+
+        </nav>
+
+    </header>
+    <br><br><br><br><br><br>
+
+    <main>
+        <div class="background">
+
+        </div>
+
+
+        <section id="birds">
+            <h1>birds Photography</h1>
+            <div class="birdphotos">
+                <div class="col1"><img src="./assets/images/bird1.jpeg"></div>
+                <div class="col2"><img src="./assets/images/bird2.jpeg"></div>
+                <div class="col3"><img src="./assets/images/bird9.jpeg"></div>
+                <div class="col4"><img src="./assets/images/bird4.jpeg"></div>
+                <div class="col5"><img src="./assets/images/bird5.jpeg"></div>
+                <div class="col6"><img src="./assets/images/bird6.jpeg"></div>
+
+            </div>
+        </section>
+        <section id="animals">
+            <h1>WildLife Animals</h1>
+
+            <div class="wildlife">
+
+                <div class="row1col1 animal"><img src="./assets/images/tiger.jpeg"></div>
+                <div class="row1col2 animal"><img src="./assets/images/animal9.jpeg"></div>
+                <div class="row1col3 animal"><img src="./assets/images/animal7.jpg"></div>
+                <div class="row2col1 animal"><img src="./assets/images/animal2.jpeg"></div>
+                <div class="row2col2 animal"><img src="./assets/images/animal11.jpeg"></div>
+                <div class="row2col3 animal"><img src="./assets/images/panda.jpeg"></div>
+                <div class="row3col1 animal"><img src="./assets/images/animal5.jpeg"></div>
+                <div class="row3col2 animal"><img src="./assets/images/animal6.jpeg"></div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
