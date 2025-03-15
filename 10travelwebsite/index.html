@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .header {
+
+            width: 100%;
+            height: 100px;
+            padding: 35px 12%;
+            background: rgba(226, 88, 145, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(12, 99, 73);
+
+        }
+
+        .navbar a {
+            font-size: 22px;
+            color: white;
+            font-weight: 500;
+            margin: 0 20px;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid transparent;
+        }
+
+        .navbar a:hover {
+
+            background-color: rgb(37, 123, 194);
+
+        }
+
+        .header h1 {
+            display: inline-block;
+            align-self: left;
+            padding-right: 30px;
+            color: rgb(16, 88, 85);
+            font-weight: bolder;
+        }
+
+
+        .heroimage {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+                url('./assets/images/bg1.jpeg');
+            background-repeat: no-repeat;
+            height: 80vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .places img {
+            height: 300px;
+            width: 350px;
+        }
+
+        #destinations {
+            margin-left: 30px;
+            padding: 10px;
+            max-width: 100%;
+            height: 200vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 5%;
+            align-items: center;
+            background-color: rgb(221, 221, 221);
+
+        }
+
+        .places img:hover {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(2);
+            box-shadow: 0 0 50px green;
+            z-index: 10;
+            max-width: 35%;
+            max-height: 35%;
+
+        }
+
+        #about h2 {
+            margin: 20px;
+            color: rgb(163, 25, 129);
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        #about p {
+            margin: 10px;
+            padding: 20px;
+            color: rgb(88, 87, 88);
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        .places h2 {
+            text-align: center;
+            color: blue;
+            font-size: 25px;
+        }
+
+        #testimonials {
+            background-color: rgba(6, 56, 97, 0.767);
+            width: 100%;
+            height: 80vh;
+        }
+
+        #testimonials h1 {
+            margin: 20px;
+            padding: 10px;
+            font-size: 35px;
+            color: rgb(219, 218, 219)
+        }
+
+        .testimonial {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+
+            /* background: linear-gradient(rgb(78, 243, 221), rgb(219, 55, 219)); */
+        }
+
+        .test1 {
+            border: 2px solid white;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(6, 56, 97, 0.767) 0%, rgba(6, 56, 97, 0.767) 35%, rgba(6, 56, 97, 0.767) 100%);
+            height: 280px;
+            width: 350px;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .test1 h2 {
+            font-size: 30px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .test1 p {
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .places {
+            border: 1px solid grey;
+            background-color: white;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .footer {
+
+            width: 100%;
+            padding: 25px 0;
+            background-color: rgba(243, 64, 139, 0.8);
+        }
+
+        .footer ul {
+            margin-top: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer ul li a {
+            color: white;
+            border-bottom: 3px solid transparent;
+        }
+
+        .footer ul li {
+            display: inline-block;
+            padding: 0 15px;
+        }
+
+        .footer .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+        }
+
+        @media(max-width:767px) {
+            *{
+                margin: 0%;
+                padding: 0%;
+            }
+            .navbar a {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #destinations {
+                display: grid;
+                grid-template-columns: 100%;
+                font-size: 12px;
+            }
+
+            .testimonial {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+            }
+
+            * {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            li a {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .list li a {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .heroimage {
+                display: none;
+            }
+
+            .places img:hover {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+
+                box-shadow: 0 0 50px green;
+                z-index: 10;
+                max-width: 35%;
+                max-height: 35%;
+
+            }
+
+            #destinations img:hover {
+                display: none;
+            }
+
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            *{
+                margin: 0%;
+                padding: 0%;
+            }
+            .navbar a {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #destinations {
+
+                display: grid;
+                grid-template-columns: 33% 33% 34%;
+                font-size: 12px;
+            }
+            .testimonial {
+               display: flex;
+               flex-direction: row;
+               flex-wrap: wrap;
+            }
+
+            #destinations img:hover {
+                display: none;
+            }
+
+            * {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .heroimage {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Explore the World</h1>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#">Tour Packages</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </header>
+    <main>
+        <div class="heroimage">
+
+        </div>
+        <br>
+
+        <section id="about">
+            <h2>Welcome to Across The World tours and Travel</h2>
+            <p>Across World tours and Travel offers a broad array of high class services from Flight Tickets Travel to
+                Holidays;Outbound Tours; Inbound Tours and events
+                Get rewarded with unique benefits as a traveller .
+                Our friendly Support Team is available to help you 24 hours a day, seven day a week.
+                Your booking with us, from start to finish, is our priority.
+                Travel World not only services your requirements, but also delivers peace of mind and
+                the assurance that you will get true value for your investment in our capabilities.</p><br><br>
+        </section>
+
+        <section id="destinations">
+
+            <div class="places">
+                <img src="./assets/images/switzerland.jpg">
+                <h2>switzerland</h2>
+
+            </div>
+            <div class="places">
+                <img src="./assets/images/italy.jpg">
+                <h2>Italy</h2>
+            </div>
+            <div class="places">
+                <img src="./assets/images/georgia.jpg">
+                <h2>Georgia</h2>
+            </div>
+            <div class="places">
+                <img src="./assets/images/greece.jpeg">
+                <h2>Greece</h2>
+            </div>
+            <div class="places">
+                <img src="./assets/images/dubai.jpg">
+                <h2>Dubai</h2>
+            </div>
+            <div class="places">
+                <img src="./assets/images/venice.jpg">
+                <h2>Venice</h2>
+            </div>
+            <div class="places">
+                <img src="./assets/images/singapore.jpeg">
+                <h2>singapore</h2>
+            </div>
+            <div class="places">
+                <img src="./assets/images/apris.jpg">
+                <h2>Paris</h2>
+            </div>
+            <div class="places">
+                <img src="./assets/images/swiss alps.jpg">
+                <h2>Swiss Alps</h2>
+            </div>
+
+        </section>
+        <br><br>
+
+        <section id="testimonials">
+            <h1>What Customers Say About Us</h1>
+            <div class="testimonial">
+                <div class="test1">
+                    <h2>Carter</h2><br>
+                    <p>"Booking through you was very easy and made our lives so much easier. I have nothing bad to say!
+                        Thank
+                        you for giving us tips and guidance before we left on what to bring and such, that was very
+                        helpful!
+                        Thanks again"</p>
+                </div>
+                <div class="test1">
+                    <h2>Magna</h2><br>
+                    <p>"Our family of 10 traveled to Riviera Maya during the 2021 holidays and the trip was wonderful!
+                        Mandi
+                        helped set up all details and everything worked like clockwork. Airfare from multiple cities,
+                        transfers, multiple hotel rooms, COVID testing protocols - everything was perfect."</p>
+                </div>
+                <div class="test1">
+                    <h2>Rick</h2><br>
+                    <p> "Hi. We had a wonderful time! I highly recommend the Resort at Longboat Key & the area. It was
+                        perfect for not being crowded on the beach w/ Covid concerns. The beach is for guests only &
+                        beautiful!....Thanks so much for finding the perfect spot for us for spring break "</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+    <footer class="footer">
+
+        <ul class="list">
+            <li>
+                <a href="#">Tour Packages</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">About Me</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+        <p class="copyright"> © 2025 Explore the world | All rights reserved</p>
+    </footer>
+</body>
+
+</html>
