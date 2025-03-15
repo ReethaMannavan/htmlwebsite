@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Car Blog</title>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: Lato, sans-serif;
+         
+        }
+        *
+        {
+            max-width: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        .main {
+            width: 70%;
+            height: 370vh;
+            min-height: 1000px;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding-left: 0px;
+            position: absolute;
+            left: 20vw;
+        }
+
+        .sidebar {
+            width: 20%;
+            height: 100vh;
+            min-height: 200px;
+            overflow: auto;
+            background: linear-gradient(rgb(255, 56, 89), rgb(117, 117, 117));
+            color: #48793c;
+            position: fixed;
+            top: 10px;
+            font-size: 25px;
+        }
+
+        .sticky {
+            padding-left: 30px;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+
+        }
+
+        li a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+        ul li a:hover {
+            background-color: black;
+        }
+
+        h2 {
+            color: green;
+        }
+
+        .sidebar h3 {
+            font-size: 30px;
+            color: rgb(48, 47, 47);
+        }
+
+        .front-img img {
+
+            height: 70vh;
+            width: 100%;
+        }
+
+        .latestcars img {
+            border-radius: 10px;
+            border-left: 3px solid rgb(233, 49, 104);
+            border-top: 3px solid rgb(233, 49, 104);
+            border-right: 3px solid rgb(113, 49, 233);
+            border-bottom: 3px solid rgb(14, 29, 236);
+            box-shadow: 0 0 10px #ad0755;
+            height: 370px;
+            width: 350px;
+        }
+
+        .latestcars {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        footer ul {
+            margin-top: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer ul li a {
+            color: white;
+            border-bottom: 3px solid transparent;
+        }
+
+        footer ul li {
+            display: inline-block;
+            padding: 0 15px;
+        }
+
+        footer .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+        }
+
+        #contact{
+            max-width: 100%;
+            /* margin: 1rem auto; */
+            text-align: left;
+            margin-bottom: 3em;
+            padding: 10px 20px;
+
+        }
+
+        .name,
+        .mail {
+            padding: 5px;
+            width: 300px;
+            height: 50px;
+            border: 3px solid rgb(233, 49, 104);
+            box-shadow: 0 0 10px #ad0755;
+
+        }
+
+        .msg {
+            border-radius: 10px;
+            border: 2px solid gray;
+            width: 300px;
+            border: 3px solid rgb(233, 49, 104);
+            box-shadow: 0 0 10px #ad0755;
+
+        }
+
+        .btn {
+            width: 200px;
+            height: 3rem;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            border-radius: 10px;
+            border: 3px solid #ad0755;
+            box-shadow: 0 0 10px #ad0755;
+            /* background:linear-gradient(to right,rgb(105, 232, 255),rgb(255, 130, 213)); */
+            background-color: rgb(255, 21, 99);
+        }
+
+        .sticky h3,
+        ul li {
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+        #home {
+            position: relative;
+            text-align: center;
+            color: rgb(245, 243, 216);
+        }
+
+        .front-img h1 {
+            font-size: 40px;
+            font-weight: bolder;
+        }
+
+        .front-img p {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        .front-img button{
+            color: rgb(19, 18, 18);
+            font-size: 20px;
+            border-radius: 10px;
+            border: 3px solid #0e0d0d;
+            box-shadow: 0 0 10px #575757;
+            /* background:linear-gradient(to right,rgb(105, 232, 255),rgb(255, 130, 213)); */
+            background-color: rgb(238, 252, 53);
+        }
+        .front-img button:hover{
+            background-color: rgb(247, 25, 99);
+        }
+
+        .top-left {
+            position: absolute;
+            top: 30px;
+            left: 16px;
+        }
+        @media(max-width:767px) {
+            *{
+                margin: 0;
+                padding: 0;
+            }
+           
+         .wrapper
+          {
+           max-width:30%;
+            background-size: contain;
+            font-size: 5px;
+          }
+          .sidebar h3{
+            font-size: 12px;
+          }
+          .main{
+            max-width: 70%;
+           
+          }
+          .sticky{
+            padding-left: 0;
+          }
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            ul li a{
+                font-size: 10px;
+            }
+            ul li{
+                padding: 0;
+            }
+
+            .front-img  div {
+                display: grid;
+                grid-template-columns: 100%;
+                font-size: 10px;
+
+            }
+
+          .latestcars {
+                display: grid;
+                grid-template-columns: 100%;
+                font-size: 10px;
+          }
+            img {
+                max-width: 100%;
+                overflow-x: hidden;
+
+            }
+            body{
+                max-width: 100%;
+                font-size: 10px;
+            }
+
+        
+            .contactus{
+              max-width: 100%;
+            }
+         
+
+
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            ul {
+                flex-direction: row;
+                align-items: center;
+
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                font-size: 12px;
+            }
+
+            .skills1 {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                font-size: 12px;
+            }
+
+            .development {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                font-size: 12px;
+            }
+
+            .projects {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                font-size: 12px;
+            }
+            .contactus{
+             max-width: 100%;
+            }
+
+        }
+
+    
+    
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h3 class="sticky">
+                Motor Trend
+            </h3>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="#">Latest Cars</a></li>
+                        <li><a href="#">Expert Reviews</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">EV Cars</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        </div>
+
+        <div class="main">
+            <Section id="home">
+                <div class="front-img">
+                    <img src="./assets/images/frontimg.jpeg">
+                    <div class="top-left">
+                        <h1>Honest Car Advice</h1>
+                        <p>From real Mechanics, Owners and Dealers</p>
+                        <button class="bt1">Buying guides</button>
+                        <button class="bt2">Car Reviews</button>
+                    </div>
+                </div>
+            </Section>
+            <br>
+
+            <section id="latest">
+                <div class="latestcars">
+                    <div class="item1">
+                        <img src="./assets/images/1audi.jpeg">
+                    </div>
+                    <div class="desc">
+                        <h2>Audi R8 Reportedly Returning as Lamborghini Temerario Twin</h2>
+                        <h3>Audi could launch a 3<sup>rd</sup>-generation R8 in 2027 based on Lamborghini's new
+                            plug-in-hybrid
+                            supercar.</h3>
+                        <p>By Caleb MillerPublished: Mar 10, 2025
+                        </p>
+                        <p>After a nearly two-decade run, Audi wound down production of its R8 supercar back in 2023,
+                            leaving a mid-engined, high-performance hole in the German automaker's lineup. </p>
+                    </div>
+                    <div class="item2">
+                        <img src="./assets/images/future-evs2.jpeg">
+                    </div>
+                    <div class="desc">
+                        <h2>Future Electric Vehicles: The EVs You'll Soon Be Able to Buy</h2>
+                        <h3>These EVs aren't for sale yet but are in various stages from concept to production</h3>
+                        <p>By Caleb MillerPublished: Mar 11, 2025
+                        </p>
+                        <p>Electric cars are the future, and each year we've seen automakers add more EVs to their
+                            lineups. Everyone is working on electric vehicles, from well-established existing
+                            manufacturers to new names such as Lucid, Canoo, and Rivian.
+                        </p>
+                    </div>
+                    <div class="item3">
+                        <img src="./assets/images/car3.jpeg">
+                    </div>
+                    <div class="desc">
+                        <h2>Report: Ram 1500 TRX Will Return in 2026 with Hemi V-8 Power</h2>
+                        <h3>The TRX nameplate could reappear next year as a new V-8-powered performance truck
+
+                        </h3>
+                        <p>By Caleb MillerPublished: Mar 10, 2025
+                        </p>
+                        <p>Ram gave its 1500 pickup trucks an overhaul for 2025, notably dropping the V-8 engine in
+                            favor of the Hurricane twin-turbocharged inline-six. Ram also introduced a new off-road
+                            performance variant</p>
+                    </div>
+                </div>
+
+            </section>
+            <br><br><br>
+            <section id="contact">
+                <form>
+                    <legend style="font-size: 30px;">Leave a Comment!</legend><br>
+                    <div class="contactus">
+
+                        <div class="items item"><input class="name" type="text" id="text" name="text"
+                                placeholder="Enter Your Name"></div><br>
+                        <!-- <label for="text">Full Name:</label> -->
+
+
+                        <!-- <label for="email">Email:</label> -->
+                        <div class="items item">
+                            <input class="mail" type="email" id="email" name="email" placeholder="Enter Valid Mail id">
+                        </div>
+
+                        <!-- <label for="message"> Address:</label> --><br>
+                        <div class="items item">
+                            <textarea class="msg" id="message" name="message" rows="6" cols="35" required
+                                placeholder="Type Message">
+                    </textarea>
+                        </div><br>
+
+                        <div class="items item">
+                            <button class="btn" type="submit">Submit Comment</button>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+           
+        </div>
+    </div>
+
+
+</body>
+
+</html>
