@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Recipes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+        }
+
+        .header {
+
+            width: 100%;
+            padding: 35px 12%;
+            background: rgba(122, 124, 123, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: orange;
+            position: fixed;
+
+        }
+
+        .header h1 {
+            text-align: left;
+            padding-right: 70px;
+            color: rgb(210, 224, 11);
+        }
+
+        .navbar a {
+            font-size: 22px;
+            color: white;
+            font-weight: 500;
+            margin: 0 20px;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid transparent;
+        }
+
+        .navbar a:hover {
+
+            background-color: rgb(210, 224, 11);
+
+        }
+
+        .navbar h1 {
+            display: inline-block;
+            align-self: left;
+            padding-right: 30px;
+            color: blue;
+            font-weight: bolder;
+        }
+
+        .background {
+            height: 120vh;
+            width: 100vw;
+            background-image: url('./assets/images/background.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+        .home img{
+            height:50vh;
+            width: 100vw;
+        }
+        #recipes img{
+            height:250px;
+            width:300px;
+       
+        }
+        #recipes h1{
+            text-align: center;
+            color:rgb(255, 39, 86);
+        }
+       .recipe{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            text-align: center;
+        }
+        .recipe a{
+            color:rgb(255, 39, 86);
+        }
+        body{
+            background-color: rgb(231, 229, 229);
+        }
+
+        @media(max-width:767px) {
+           
+        
+           
+           ul {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+           }
+           .recipe{
+            display: grid;
+            grid-template-columns: 100%;
+           }
+
+       
+           img {
+               max-width: 100%;
+               overflow-x: hidden;
+
+           }
+           body{
+               max-width: 100%;
+               font-size: 10px;
+           }
+           
+        }
+
+       
+
+       @media(min-width:768px) and (max-width:1023px) {
+           ul {
+               flex-direction: row;
+               align-items: center;
+
+           }
+
+           .recipe {
+               display: grid;
+               grid-template-columns: 50% 50%;
+               font-size: 12px;
+           }
+
+
+       }
+
+   
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1>Yummy Recipes</h1>
+        <nav class="navbar">
+            <a href="#">Home Kitchen</a>
+            <a href="#">Starters</a>
+            <a href="#">Recipe</a>
+            <a href="#">Cook Book</a>
+            
+        </nav>
+
+    </header>
+    <hr>
+    <br><br><br><br><br><br><br>
+    <main>
+        <section id="home">
+
+        <section id="recipes">
+            <h1>Simple Recipes Made for real</h1><br>
+            <div class="recipe">
+            <div class="item1 item">
+                <img src="./assets/images/paneer.jpg">
+                <h3><a href="./pages/paneer.html">Paneer Butter Masala</a></h3>
+            </div>
+            <div class="item2 item"><img src="./assets/images/briyani.jpeg">
+                <h3><a href="">Chicken Briyani</a></h3></div>
+            <div class="item3 item"><img src="./assets/images/palakpaneer.jpeg">
+                <h3><a href="">Palak Paneer</a></h3></div>
+            <div class="item4 item"><img src="./assets/images/briyani2.jpeg">
+                <h3><a href="">Vegetable Briyani</a></h3></div>
+            </div>
+        </section>
+        </section>
+    </main>
+</body>
+</html>

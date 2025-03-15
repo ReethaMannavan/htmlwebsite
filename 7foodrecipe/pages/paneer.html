@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paneer butter masala</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+        }
+
+        .header {
+
+            width: 100%;
+            padding: 35px 12%;
+            background: rgba(122, 124, 123, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: orange;
+            position: fixed;
+
+        }
+
+
+        .navbar a {
+            font-size: 22px;
+            color: white;
+            font-weight: 500;
+            margin: 0 20px;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid transparent;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+
+            background-color: rgb(210, 224, 11);
+
+        }
+
+        .navbar h1 {
+            display: inline-block;
+            align-self: left;
+            padding-right: 30px;
+            color: blue;
+            font-weight: bolder;
+        }
+
+        .background {
+            height: 120vh;
+            width: 100vw;
+            background-image: url('./assets/images/background.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+
+        .home img {
+            height: 50vh;
+            width: 100vw;
+        }
+
+        #recipes img {
+            height: 250px;
+            width: 300px;
+
+        }
+
+        #recipes h1 {
+            text-align: center;
+            color: rgb(255, 39, 86);
+        }
+
+        .recipe {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            text-align: center;
+        }
+
+        .recipe a {
+            color: rgb(255, 39, 86);
+        }
+
+        .recipe-img img {
+            height: 350px;
+            width: 400px;
+        }
+
+        .paneer {
+
+            padding-left: 40px;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 80%;
+            /* text-align: justify; */
+
+        }
+        .paneer div{
+            gap:10%;
+        }
+
+        .ingredients ul {
+            padding-left: 10%;
+            list-style: disc;
+
+        }
+
+        .ingredients ul li {
+
+            font-weight: bolder;
+            color: brown;
+            font-size: 18px;
+        }
+
+        .butter h1 {
+            color: rgb(214, 25, 82);
+            font-weight: bolder;
+        }
+
+        .butter p {
+            color: rgb(104, 104, 104);
+            font-size: 20px;
+        }
+
+        .instructions h2 {
+            color: rgb(214, 25, 82);
+            font-weight: bolder;
+        }
+
+        ol li {
+
+            font-weight: bolder;
+            color: brown;
+            font-size: 17px;
+        }
+        .instructions ol{
+            padding-left: 10%;
+        }
+
+        .back {
+            width: 250px;
+            height: 60px;
+            font-size: 20px;
+            font-weight: bolder;
+            background-color: darksalmon;
+            ;
+            border: 2px solid darksalmon;
+            border-radius: 5px;
+
+        }
+
+        .back a {
+            text-decoration: none;
+            color: rgb(146, 12, 113);
+        }
+
+        .btn {
+            text-align: center;
+        }
+
+        .recipe-img {
+            position: relative;
+        }
+
+        .top {
+            position: absolute;
+            top: 5px;
+            text-align: center;
+            font-size: 20px;
+            color: rgb(190, 182, 182);
+            left: 50px;
+        }
+        .butter{
+           gap:20%;
+        }
+
+        body {
+            background-color: rgb(231, 229, 229);
+        }
+        @media(max-width:767px) {
+          header{
+            display: flex;
+            flex-direction: column;
+          }
+          nav a{
+            display: flex;
+            flex-direction: column;
+          }
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .paneer {
+                display: grid;
+                grid-template-columns: 100%;
+                font-size: 10px;
+
+            }
+            body{
+                font-size: 10px;
+            }
+            *{
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            ul {
+                flex-direction: row;
+                align-items: center;
+
+            }
+            .paneer {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                font-size: 10px;
+
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Yummy Recipes</h1>
+        <nav class="navbar">
+            <a href="../index.html">Home Kitchen</a>
+            <a href="#">Starters</a>
+            <a href="#">Recipe</a>
+            <a href="#">Cook Book</a>
+
+        </nav>
+
+    </header>
+    <br><br><br><br><br><br><br><br>
+    <main>
+        <div class="paneer">
+            <div class="butter">
+                <h1>Paneer Butter Masala Recipe</h1><br>
+                <p>Paneer Butter Masala is one of India’s most popular paneer recipes, and with good reason! Indian
+                    cottage
+                    cheese cubes are smothered in a creamy, lightly spiced tomato sauce that is downright delicious.
+                    With my
+                    video and step-by-step guide you can easily make this most flavorful, tasty and restaurant style
+                    Paneer
+                    Butter Masala recipe at home!</p><br>
+                <div class="recipe-img">
+                    <img src="../assets/images/paneer1.jpeg">
+                    <div class="top">
+                        <h2>Paneer Butter Masala</h2>
+                    </div>
+                </div><br>
+                <div class="para">
+                    <p>About Paneer Butter Masala Recipe
+                        This Paneer Butter Masala recipe is a rich and creamy dish of paneer (Indian cottage cheese) in
+                        a
+                        tomato, butter and cashew sauce that is known here as “makhani gravy.”
+
+                        The acidity of the tomatoes and the sweetness of the cream make for a velvety, nearly addictive
+                        sauce.
+
+                        Also known as “Butter Paneer,” this yummy and popular vegetarian dish is derived from the recipe
+                        for
+                        Butter Chicken, a.k.a. Chicken Makhani, that I learned to make during my cooking school days.
+                    </p><br>
+                    <div class="ingredients">
+                        <ul class="unord">
+                            <li>Paneer Cubes - 500gms</li>
+                            <li>Onion - 500gms</li>
+                            <li>Tomato - 2no's</li>
+                            <li>Ginger garlic Paste</li>
+                            <li>Fresh Cream</li>
+                        </ul>
+                    </div><br>
+                    <div class="instructions">
+                        <h2>Instructions</h2><br>
+                        <ol class="ord">
+                            <li>
+                                Soak cashews in a hot water for 20 to 30 minutes. When the cashews are soaking, you can
+                                prep the other ingredients like chopping tomatoes, preparing ginger-garlic paste,
+                                slicing paneer etc.
+                            </li>
+                            <li>Blend to a smooth tomato puree. Set aside. Don’t add any water while blending the
+                                tomatoes.</li>
+                            <li>Add 2 to 3 tablespoons water and blend to a smooth and fine paste without any tiny bits
+                                or chunks of cashews.</li>
+                            <li>Then drain and add the soaked cashews in a blender or mixer-grinder.</li>
+                            <li>Add ginger-garlic paste and sauté for about 10 to 12 seconds till the raw aroma
+                                disappears.</li>
+                            <li>After the gravy thickens to your desired consistency, then add the paneer cubes and stir
+                                gently. I keep the gravy to a medium consistency. </li>
+                        </ol>
+                    </div>
+                    <br>
+                    <div class="btn">
+                        <button class="back"><a href="">Back to Top</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+</body>
+
+</html>
