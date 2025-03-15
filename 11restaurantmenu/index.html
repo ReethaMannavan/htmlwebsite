@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Restaurant menu</title>
+    <style>
+        body {
+
+            max-width: 85%;
+            font-size: 20px;
+            font-family: Lato, sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        main {
+            width: 80%;
+            height: 370vh;
+            min-height: 1000px;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            position: absolute;
+            left: 15vw;
+        }
+
+        .sidebar {
+            width: 15%;
+            height: 250vh;
+            min-height: 200px;
+            overflow: auto;
+            background: linear-gradient(rgb(255, 134, 104), rgb(224, 100, 100));
+            color: #48793c;
+            position: fixed;
+            top: 10px;
+            font-size: 25px;
+        }
+
+        .sticky {
+            padding-left: 30px;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+
+        }
+
+        li a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+        ul li a:hover {
+
+            background-color: rgb(112, 112, 112);
+            border: 2px solid rgb(129, 129, 129);
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-style: oblique;
+            padding-left: 30px;
+            color: rgb(2, 112, 7);
+        }
+
+        .sidebar h3 {
+            font-weight: bolder;
+            font-style: italic;
+            font-size: 30px;
+            color: rgb(48, 47, 47);
+        }
+
+        .starters1,
+        .starters2,
+        .main-course1,
+        .briyani1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        h2 {
+            color: green;
+        }
+
+        button {
+            width: 80px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: rgb(153, 12, 12);
+            border: 1px solid rgb(73, 72, 72);
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        .price:hover {
+            width: 50px;
+            background-color: #e71151;
+            transform: scale(1.5);
+        }
+
+        .imgbtn:hover {
+            width: 70px;
+            background-color: #e71151;
+            transform: scale(1.2);
+        }
+
+        img {
+            height: 100px;
+            width: 120px;
+        }
+
+        #home {
+            padding-left: 0px;
+        }
+
+        .front-img img {
+            padding-left: 20px;
+
+            height: 70vh;
+            width: 80vw;
+        }
+
+        #menu,
+        #menu2,
+        #menu3 {
+
+            padding-left: 40px;
+            padding-right: 20px;
+            align-content: center;
+        }
+
+        #menu2 h2 {
+            color: #e71151
+        }
+
+        #menu3 h2 {
+            color: #eb3305;
+        }
+
+        .item {
+            gap: 10%;
+            padding: 20px;
+            background-color: white;
+            border: 5px solid rgb(220, 223, 245);
+            border-radius: 10px;
+        }
+
+        .item img:hover {
+            transform: scale(1.3);
+        }
+
+        @media(max-width:767px) {
+            * {
+                margin: 0%;
+                padding: 0%;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            main {
+                max-width: 100%;
+            }
+
+            ul {
+                flex-direction: row;
+                align-items: center;
+
+            }
+
+            #menu,
+            #menu2,
+            #menu3 {
+                display: grid;
+                grid-template-columns: 100%;
+                font-size: 12px;
+            }
+
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            * {
+                margin: 0%;
+                padding: 0%;
+            }
+
+            .sidebar {
+
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                font-size: 10px;
+            }
+
+            .sidebar h3 {
+                font-size: 10px;
+            }
+
+            main {
+                max-width: 70%;
+            }
+
+            ul {
+                flex-direction: row;
+                align-items: center;
+
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h3 class="sticky">
+                Chettinad Restaurant
+            </h3>
+            <header>
+                <h1>Menu</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Starters</a></li>
+                        <li><a href="#menu2">Main Course</a></li>
+                        <li><a href="#menu3">Briyani</a></li>
+                        <li><a href="#">Dessert</a></li>
+
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <main>
+            <Section id="home">
+                <div class="front-img">
+                    <img src="./assets/images/bg7.jpeg">
+                    <div class="top-left">
+                        <h1></h1>
+                        <p></p>
+
+                    </div>
+                </div>
+            </Section>
+            <br>
+
+            <Section id="menu">
+                <div class="starters">
+                    <div class="starters1">
+                        <div class="item1 item">
+                            <h2>Garlic Chicken Dry</h2>
+                            <p class="price">₹327</p>
+                            <p>Shallow-fried, batter-coated chicken chunks tossed <br>in a garlic flavoured sauce.</p>
+                            <div class="image">
+                                <img src="./assets/images/garlicdry.jpg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                        <div class="item2 item">
+                            <h2>Tandoori Chicken</h2>
+                            <p class="price">₹385</p>
+                            <p>Tandoor-cooked chicken chunks that are marinated <br>in a yogurt and chilli based masala.
+                            </p>
+                            <div class="image"><img src="./assets/images/tandoorichicken.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="starters2">
+                        <div class="item3 item">
+                            <h2>Chicken Lollypop</h2>
+                            <p class="price">₹365</p>
+                            <p>Shallow-fried chicken drumsticks covered in <br>a fiery red marinade of chilli, ginger
+                                and garlic.
+                            </p>
+                            <div class="image"><img src="./assets/images/lollypop.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                        <div class="item4 item">
+                            <h2>Chicken 65</h2>
+                            <p class="price">₹315</p>
+                            <p>Shallow-fried chicken boneless covered in <br>a fiery red marinade of chilli_ginger
+                                garlic.</p>
+                            <div class="image"><img src="./assets/images/chicken.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <Section id="menu2">
+
+                <div class="main-course">
+                    <div class="main-course1">
+                        <div class="item1 item">
+                            <h2>Nattukozhi kulambu</h2>
+                            <p class="price">₹327</p>
+                            <p>Shallow-fried, batter-coated chicken chunks tossed in a<br> garlic flavoured sauce.</p>
+                            <div class="image"><img src="./assets/images/gravy2.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                        <div class="item2 item">
+                            <h2>Special Chicken dry</h2>
+                            <p class="price">₹385</p>
+                            <p>Tandoor-cooked chicken chunks that are marinated in <br>a yogurt and chilli based masala.
+                            </p>
+                            <div class="image"><img src="./assets/images/gravy3.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-course1">
+                        <div class="item3 item">
+                            <h2>Chicken Gravy</h2>
+                            <p class="price">₹365</p>
+                            <p>Shallow-fried chicken drumsticks covered in a fiery red marinade of chilli, ginger
+                                andgarlic.
+                            </p>
+                            <div class="image"><img src="./assets/images/garlicdry.jpg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                        <div class="item4 item">
+                            <h2>Chettinadu Kozhi kozhambu</h2>
+                            <p class="price">₹315</p>
+                            <p>Shallow-fried chicken boneless covered in <br>a fiery red marinade of chilli_ginger and
+                                garlic.
+                            </p>
+                            <div class="image"><img src="./assets/images/muttonmasala.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+            <section id="menu3">
+                <div class="Briyani">
+                    <div class="briyani1">
+                        <div class="item1 item">
+                            <h2>Nattukozhi Biryani</h2>
+                            <p class="price">₹327</p>
+                            <p>Shallow-fried, batter-coated chicken chunks<br> tossed in a garlic flavoured sauce.</p>
+                            <div class="image"><img src="./assets/images/briyani.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                        <div class="item2 item">
+                            <h2>Tandoori Chicken Biryani</h2>
+                            <p class="price">₹385</p>
+                            <p>Tandoor-cooked chicken chunks that are <br>marinated in a yogurt and chilli based masala.
+                            </p>
+                            <div class="image"><img src="./assets/images/briyani1.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="briyani1">
+                        <div class="item3 item">
+                            <h2>Seeraga Samba Mutton Biryani</h2>
+                            <p class="price">₹365</p>
+                            <p>Shallow-fried chicken drumsticks covered in <br>a fiery red marinade of chilli, ginger
+                                and garlic.
+                            </p>
+                            <div class="image"><img src="./assets/images/briyani12.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                        <div class="item4 item">
+                            <h2>Fish Biryani</h2>
+                            <p class="price">₹315</p>
+                            <p>Shallow-fried chicken boneless covered in a fiery red <br>marinade of chilli_ginger and
+                                garlic.
+                            </p>
+                            <div class="image"><img src="./assets/images/fish.jpeg"><br><br>
+                                <div><button class="imgbtn">Add</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+</body>
+
+</html>
