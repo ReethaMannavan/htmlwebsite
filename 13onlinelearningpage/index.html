@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .flexbox {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .header {
+
+            width: 100%;
+            padding: 35px 12%;
+            background-color: rgb(223, 90, 110);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgb(198, 195, 204);
+
+        }
+
+        .navbar a {
+            font-size: 22px;
+            color: white;
+            font-weight: 500;
+            margin: 0 20px;
+            font-weight: bold;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid transparent;
+            text-decoration: none;
+        }
+
+
+
+        #home {
+            padding: 20px;
+            background-color: lightpink;
+            height: 80vh;
+
+        }
+
+
+        .reg {
+            width: 150px;
+            height: 50px;
+            border: 1px solid orange;
+            border-radius: 15px;
+        }
+
+        .featured-image {
+            position: relative;
+            top: 50px;
+            left: 30px;
+        }
+
+        .featured-image h1 {
+            color: rgb(116, 77, 7);
+            font-size: 35px;
+        }
+
+        .featured-image .firstpara {
+            color: rgb(3, 3, 34);
+            font-size: 50px;
+        }
+
+        .home-btn {
+            width: 150px;
+            height: 50px;
+            background-color: rgb(233, 169, 51);
+            border: 1px solid orange;
+            border-radius: 15px;
+            font-size: 18px;
+        }
+
+        .featured-image h4 {
+            color: rgb(99, 99, 100);
+            font-size: 18px;
+            padding-left: 15px;
+        }
+
+        .price {
+            font-size: 30px;
+
+        }
+
+        .hero-img img {
+            position: relative;
+            left: 100px;
+            width: 450px;
+            height: 400px;
+        }
+
+        #top-lang {
+            background-color: rgb(216, 215, 215);
+        }
+
+        #top-lang h1 {
+            color: rgb(3, 3, 34);
+            padding: 30px;
+            background-color: rgb(216, 215, 215);
+            font-size: 35px;
+        }
+
+        .lang-img img {
+            height: 80px;
+            width: 100px;
+        }
+
+        .language {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            height: 50vh;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        .lang1,
+        .lang2,
+        .lang3 {
+
+            justify-content: center;
+            height: 180px;
+            width: 400px;
+            display: flex;
+            flex-direction: row;
+
+            border: 1px solid gray;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+        .lang-img {
+            align-self: center;
+        }
+
+        .long-desc {
+            align-self: center;
+        }
+
+        .long-desc p {
+            text-align: left;
+            color: rgb(78, 92, 105);
+            align-self: center;
+        }
+
+        .long-desc h5 {
+            font-size: 20px;
+            color: rgb(49, 49, 99);
+            font-weight: bolder;
+            align-self: baseline;
+        }
+
+        .grid-container {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .para-btn {
+
+            width: 180px;
+            height: 60px;
+            background-color: rgb(233, 169, 51);
+            border: 1px solid orange;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+
+
+        #about {
+            background-color: rgb(216, 215, 215);
+        }
+
+        .para h2 {
+            color: navy;
+            font-size: 40px;
+        }
+
+        .para p {
+            font-size: 25px;
+            color: grey;
+        }
+
+        .img {
+            width: 480px;
+            padding: 10px;
+            border-radius: 25px;
+            background-color: white;
+        }
+
+        .img img {
+            height: 400px;
+            width: 450px;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .img h2 {
+            color: navy;
+            font-size: 35px;
+            text-align: center;
+
+        }
+
+        .img h3 {
+            color: navy;
+            font-size: 25px;
+            text-align: center;
+
+        }
+
+        .img p {
+            font-size: 20px;
+            text-align: left;
+            text-align: center;
+            color: gray;
+        }
+
+        #classes {
+            background-color: rgb(216, 215, 215);
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        button:hover {
+            transform: scale(1.2);
+        }
+
+        .navbar a:hover {
+      
+            background-color: white;
+            border: 2px solid rgb(87, 81, 4);
+            color: rgb(87, 81, 4);
+            border-radius: 10px;
+            transform: scale(1.2);
+
+        }
+
+        #faq {
+            padding: 30px;
+            background-color: rgb(216, 215, 215);
+        }
+
+        #faq h1 {
+            font-size: 30px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .content {
+            width: 80%;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        summary {
+            font-size: 1.25rem;
+            font-weight: 600;
+            background-color: #fff;
+            color: #333;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            outline: none;
+            border-radius: 0.25rem;
+            text-align: left;
+            cursor: pointer;
+            position: relative;
+        }
+
+        details>summary::after {
+            position: absolute;
+            content: "+";
+            right: 20px;
+        }
+
+        details[open]>summary::after {
+            position: absolute;
+            content: "-";
+            right: 20px;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary~* {
+            animation: sweep 0.5s ease-in-out;
+        }
+
+        @keyframes sweep {
+            0% {
+                opacity: 0;
+                margin-top: -10px;
+            }
+
+            100% {
+                opacity: 1;
+                margin-top: 0px;
+            }
+        }
+
+        @media(max-width:767px) {
+            body{
+                font-size: small;
+            }
+            .navbar {
+                display: flex;
+                flex-direction: column;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .featured-image,
+            .language,
+            .grid-container {
+                display: grid;
+                grid-template-columns: 100%;
+            }
+
+            * {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .box {
+                display: flex;
+                flex-direction: column;
+            }
+            .featured-image{
+                background-size: contain;
+                position: relative;
+                left: 0;
+            }
+            .flexbox{
+                display: flex;
+                flex-direction: column;
+            }
+
+
+        }
+
+        @media(min-width:768px) and (max-width:1023px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+            }
+            .flexbox{
+                padding:0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            ul {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .featured-image,
+            .language,
+            .grid-container {
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+
+            * {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>No-1 Coding</h1>
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Courses">Courses</a>
+            <a href="#classes">Workshops</a>
+            <a href="#services">About Us</a>
+            <a href="#contact">Sign-In</a>
+            <button class="reg">Register Now</button>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="home">
+            <article class="flexbox">
+                <div class="featured-image">
+                    <h1>-- The New Era has been started</h1><br>
+                    <p class="firstpara">Bright Your Future With <br>New Learning Technology <br>From All Experts</p>
+                    <br>
+                    <button class="home-btn"> Start Free Trial</button><br><br>
+                    <h4>Or Subscribe at</h4><br>
+                    <p class="price">$19/Month</p>
+                </div>
+                <div class="hero-img">
+                    <img src="./assets/images/heroimage.jpeg">
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <section id="top-lang">
+            <h1>Top Language To Learn</h1>
+            <div class="language">
+                <div class="lang1">
+                    <div class="lang-img">
+                        <img src="./assets/images/html5.jpg">
+                    </div>
+                    <div class="long-desc">
+                        <h5>HTML5</h5>
+                        <p>HTML5 is the latest version of the HTML (HyperText Markup Language) standard. <br>It is used
+                            to
+                            structure and present content on the web.</p>
+                    </div>
+
+                </div>
+                <div class="lang2">
+                    <div class="lang-img">
+                        <img src="./assets/images/css3.jpg">
+                    </div>
+                    <div class="long-desc">
+                        <h5>CSS3</h5>
+                        <p>CSS (Cascading Style Sheets) is a stylesheet language used to style web pages, while CSS3 is
+                            its advanced version with new features and modules</p>
+                    </div>
+                </div>
+                <div class="lang3">
+                    <div class="lang-img">
+                        <img src="./assets/images/js.jpg">
+                    </div>
+                    <div class="long-desc">
+                        <h5>JavaScript</h5>
+                        <p>A JavaScript function is a block of code designed to perform a particular task. A JavaScript
+                            function is executed when "something" invokes it (calls it).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="grid-container">
+
+                <div class="img">
+                    <img src="./assets/images/aboutimg.jpeg">
+                    <h2>Visual Design</h2>
+                    <h3>24 Lessons </h3><br><br>
+                    <p>Take an essential step in your motion<br> design journey by mastering the basics.</p>
+                </div>
+                <div class="para">
+                    <h2>The best Investment is Learning New Knowledge</h2><br><br><br>
+                    <p>Our Teaching experts are Working artists. here to give tarteted and actionable
+                        feedback on your work, as well as technical and creative support throughout your journey.
+                    </p><br><br>
+                    <button class="para-btn">Start Trial</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- <Section id="classes">
+            <h1>Discover Our Popular Classes</h1>
+            <div class="courses">
+                <div class="course1 course">
+                    <div class="course-img">
+                        <img src="">
+                        <h1>UI/UX Design</h1>
+                        <p class="first-para"></p>
+                        <p class="second-para"></p>
+                    </div>
+                </div>
+                <div class="course2 course">
+                    <div class="course-img">
+                        <img src="">
+                        <h1>PHP Programming</h1>
+                        <p class="first-para"></p>
+                        <p class="second-para"></p>
+                    </div>
+                </div>
+                <div class="course3 course">
+                    <div class="course-img">
+                        <img src="">
+                        <h1>Python Full stack</h1>
+                        <p class="first-para"></p>
+                        <p class="second-para"></p>
+                    </div>
+                </div>
+                <div class="course4 course">
+                    <div class="course-img">
+                        <img src="">
+                        <h1>Java Programming</h1>
+                        <p class="first-para"></p>
+                        <p class="second-para"></p>
+                    </div>
+                </div>
+            </div>
+        </Section> -->
+        <Section id="faq">
+            <h1>Frequently asked Questions?</h1>
+            <div class="box">
+                <div class="content">
+                    <details>
+                        <summary>Does online learning really work?</summary>
+                        <div class="faq__content">
+                            <p> On a general basis, yes, online learning can be effective. However, that depends on
+                                whether the courses are set up properly, the provider is educated and experienced.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What types of assignments do you give?</summary>
+                        <div class="faq__content">
+                            <p>we will give daily tasks and projects.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What are the technology requirements?</summary>
+                        <div class="faq__content">
+                            <p>You Need a laptop with good network connection. then have to install some softwares.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How long does each course take?</summary>
+                        <div class="faq__content">
+                            <p>The Time Duration is approximately 3 months.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How much do courses cost?</summary>
+                        <div class="faq__content">
+                            <p>It Depends. Average Cost is 30k.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </Section>
+       
+</body>
+
+</html>
