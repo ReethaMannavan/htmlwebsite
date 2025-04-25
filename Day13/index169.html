@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+ 
+</head>
+<body>
+    <!--JS169. Fetch data from a JSON file and display it in a dropdown list.    -->
+
+ 
+    <h2>Dynamic drop down select menu</h2>
+	<div class="placeholder">
+		<p>
+			Selected country: <span id="country"></span>
+		</p>
+		<p>
+			Selected city: <span id="city"></span>
+		</p>
+	</div>
+
+
+	<h3>Please select your country and city</h3>
+	<form>
+	    <select onchange="getCities(this.value)" name="countries">
+	        <option value="">Choose a country</option>
+	        <option value="England">England</option>
+	        <option value="France">France</option>
+	        <option value="Spain">Spain</option>
+	        <option value="Germany">Germany</option>
+	    </select>
+
+	    <select onchange="getCity(this.value)" name="cities" id="cities" disabled>
+	        <option value="">Choose a city</option>
+	    </select>
+	</form>
+
+
+     <script src="./assets/js/script169.js"></script>
+</body>
+</html>
