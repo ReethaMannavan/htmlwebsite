@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Table with API Data</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.profile {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+</style>
+  
+</head>
+<body>
+
+ 
+  <!-- 5. Fetch and display GitHub user profiles.  -->
+  <div class="container">
+    <h1>GitHub Profile Viewer</h1>
+    <form id="profileForm">
+        <input type="text" id="username" placeholder="Enter GitHub username" required>
+        <button type="submit">Search</button>
+    </form>
+    <div id="profileContainer" class="profile"></div>
+</div>
+
+
+ 
+
+</html>
+
+
+
+    
+
+
+<script src="./assets/js/script5.js"></script>
+</body>
+</html>
